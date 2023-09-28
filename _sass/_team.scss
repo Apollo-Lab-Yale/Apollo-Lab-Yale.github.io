@@ -15,6 +15,17 @@
     }
   }
 
+  .flex-shrink-1 {
+    width: 150px;
+    
+    img {
+      height: 150px;
+      width: 150px;
+      border: 6px solid $gray-200;
+      border-radius: 150px;
+    }
+  }
+
   .orcid {
     height: 16px;
     width: 16px;

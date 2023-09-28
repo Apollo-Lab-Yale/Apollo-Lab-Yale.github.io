@@ -13,11 +13,19 @@ description: Template for team page.
 
 {% for member in team %}
   <div class="d-flex team-member">
-    <div class="flex-shrink-0 me-3">
+
+    {% if member.role_separator %} 
+      <div>
+        <h2><b>{{ member.role_separator }}</b></h2>
+      </div>
+    {% endif %}
+
+    <div class="flex-shrink-1 me-3">
       {% if member.image %}
         <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
       {% endif %}
     </div>
+
     <div>
       <h5 id="{{ member.name | strip | url_encode }}">
         {{ member.name }}
