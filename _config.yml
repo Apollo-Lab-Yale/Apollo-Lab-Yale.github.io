@@ -1,3 +1,5 @@
+theme: jekyll-theme-petridish
+
 # SITE SETTINGS
 title: Apollo Lab                       # Title in top navigation bar (navbar) and <head>
 author: Apollo Lab                    # Used for copyright statement in footer
