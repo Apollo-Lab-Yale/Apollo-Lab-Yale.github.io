@@ -1,5 +1,3 @@
-remote_theme: peterdesmet/petridish@3.0
-
 # SITE SETTINGS
 title: Apollo Lab                       # Title in top navigation bar (navbar) and <head>
 author: Apollo Lab                    # Used for copyright statement in footer
