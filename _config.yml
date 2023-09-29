@@ -33,20 +33,15 @@ markdown: kramdown
 plugins:                                # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
   - jekyll-feed
   - jekyll-sitemap
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - LICENSE
-  - package-lock.json
-  - package.json
-  - petridish.gemspec
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+#exclude:
+#  - README.md
+#  - Gemfile
+#  - Gemfile.lock
+#  - node_modules
+#  - LICENSE
+#  - package-lock.json
+#  - package.json
+#  - petridish.gemspec
 
 # FRONTMATTER DEFAULTS
 defaults:
