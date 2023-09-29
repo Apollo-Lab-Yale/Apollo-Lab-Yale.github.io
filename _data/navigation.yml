@@ -2,8 +2,18 @@
 
 - text: Home # Note that users can also reach the homepage by clicking the site's title on the left in the navbar
   href: /
+- text: Research
+  menu: 
+  - text: Combined Visual and Manipulation Learning
+    href: /research/combined-visual-and-manipulation-learning/
+  - text: Combined Continuous and Discrete Reasoning
+    href: /research/combined-continuous-and-discrete-reasoning/
 - text: Team
   href: /team/
+- text: Publications
+  href: /publications/
+- text: News
+  href: /news/
 #- text: About
 #  href: /about/
 #- text: Team
