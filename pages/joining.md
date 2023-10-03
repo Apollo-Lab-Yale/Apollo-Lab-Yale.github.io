@@ -1,0 +1,4 @@
+---
+title: Joining
+permalink: /joining/
+---
