@@ -1,14 +1,30 @@
-# petridish 🧫
+# Apollo Lab Website
 
-Petridish is a Jekyll theme for research project websites. Or your personal blog or lab website. 👩‍🔬 It's mobile-friendly (thanks to [Bootstrap 5](https://getbootstrap.com/docs/5.1/)), free, easy to customize, and designed to work well with [GitHub Pages](https://pages.github.com/).
+This website is modified based on the Jekyll theme [petridish](https://github.com/peterdesmet/petridish).
 
-## Installation
+## Table of Contents
+- [Setup for Local Development](#setup-for-local-development)
 
-See the demo website for instructions:
 
-- [Installation](https://peterdesmet.github.io/petridish/docs/installation)
-- [Configuration](https://peterdesmet.github.io/petridish/docs/configuration)
-- [Markdown](https://peterdesmet.github.io/petridish/docs/markdown)
+## Setup for Local Development
+1. Install Jekyll following the [official quickstart guide](https://jekyllrb.com/docs/).
+    - Preferably, install Ruby+Devkit 2.78 and RubyGems 3.4.20
+2. Clone this repository to your computer
+    ```
+    git clone https://github.com/Apollo-Lab-Yale/Apollo-Lab-Yale.github.io.git
+    ```
+3. Navigate to the cloned repository
+    ```
+    cd Apollo-Lab-Yale.github.io
+    ```
+4. Install bundle executables
+    ```
+    bundle install
+    ```
+5. Run the website locally
+    ```
+    bundle exec jekyll serve
+    ```
 
 ## Preview
 

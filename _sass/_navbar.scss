@@ -5,9 +5,10 @@
   border-bottom: 1px solid $gray-200;
 
   .navbar-brand {
+    // disable text displaying
     font-weight: bold;
     img {
-      height: 30px;
+      height: 42px;
     }
   }
 
