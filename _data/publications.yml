@@ -1,0 +1,32 @@
+# Conference
+- title: "PROXIMA: An Approach for Time or Accuracy Budgeted Collision Proximity Queries"
+  authors: "Daniel Rakita, Bilge Mutlu, Michael Gleicher"
+  type: "Conference"
+  venue: "Robotics: Science and Systems"
+  year: 2022
+  link: "https://www.roboticsproceedings.org/rss18/p043.pdf"
+
+# Journal
+- title: "MotionBenchMaker: A Tool to Generate and Benchmark Motion Planning Datasets"
+  authors: "Constantinos Chamzas, Carlos Quintero-Pena, Zachary Kingston, Andreas Orthey, Daniel Rakita, Michael Gleicher, 
+            Marc Toussaint, Lydia E Kavraki"
+  type: "Journal"
+  venue: "IEEE Robotics and Automation Letters"
+  year: 2021
+  link: "https://ieeexplore.ieee.org/abstract/document/9645379"
+
+# Preprint
+- title: "RangedIK: An Optimization-based Robot Motion Generation Method for Ranged-Goal Tasks"
+  authors: "Yeping Wang, Pragathi Praveena, Daniel Rakita, Michael Gleicher"
+  type: "Preprint"
+  venue: "arXiv"
+  year: 2023
+  link: "https://arxiv.org/abs/2302.13935" 
+
+# Workshop
+- title: "Methods for Effective Mimicry-based Teleoperation of Robot Arms"
+  authors: "Daniel Rakita"
+  type: "Workshop"
+  venue: "International Conference on Human-Robot Interaction (HRI) Pioneers Workshop"
+  year: 2017
+  link: "https://dl.acm.org/doi/abs/10.1145/3029798.3034812"
