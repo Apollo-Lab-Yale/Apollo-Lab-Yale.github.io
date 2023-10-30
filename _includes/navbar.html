@@ -47,7 +47,14 @@
                 {% else %}
                   {% assign item_text = site.pages | where: 'url', item.href | map: 'title' | first %}
                 {% endif %}
-                <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item_text }}</a>
+                <!-- if item.under_construction is true, display a small text of under construction -->
+                {% if item.under_construction %}
+                  <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>
+                    {{ item_text }} <span style="font-size: 0.6em; color: #6c757d;">(Under Construction)</span>
+                  </a>
+                {% else %}
+                  <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item_text }}</a>
+                {% endif %}
               </li>
             {% endif %}
           {% endfor %}

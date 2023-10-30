@@ -2,6 +2,9 @@
 title: Publications
 permalink: /publications/
 ---
+
+<center><b>Under Construction</b></center>
+
 {% assign sorted_publications = site.data.publications | group_by: "type" %}
 
 {% for type in sorted_publications %}

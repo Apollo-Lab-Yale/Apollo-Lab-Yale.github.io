@@ -4,6 +4,7 @@
 
 - name: Daniel Rakita
   role: Principle Investigator # Will appear next to name
+  website: https://dannyrakita.net/
   image: assets/theme/images/team/daniel_rakita.jpg # Can be external link
   #description: > # Can be Markdown
   #  Protagonist, from the 20th century. Many times great-uncle to Professor Hubert Farnsworth.
@@ -21,11 +22,16 @@
 
 - name: Xiatao Sun
   role: Ph.D. Student
+  website: https://sunxiatao.me/
+  googlescholar: GXiMleUAAAAJ&hl
+  github: M4D-SC1ENTIST
+  email: xiatao.sun@yale.edu
   image: assets/theme/images/team/xiatao_sun.jpg
 
 - name: Liam Merz Hoffmeister
   role: Ph.D. Student
   image: assets/theme/images/team/liam_merz_hoffmeister.jpg
+  github: LiamMZ
 
 #- role_separator: Master's Students
 

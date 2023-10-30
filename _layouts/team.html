@@ -28,7 +28,12 @@ description: Template for team page.
 
     <div>
       <h5 id="{{ member.name | strip | url_encode }}">
-        {{ member.name }}
+        <!-- add hyperlink to personal website on member.name-->
+        {% if member.website %}
+          <a href="{{ member.website }}">{{ member.name }}</a>
+        {% else %}
+          {{ member.name }}
+        {% endif %}
         {% if member.role %}
           <small class="text-muted">| {{ member.role }}</small>
         {% endif %}
