@@ -3,8 +3,6 @@ title: Publications
 permalink: /publications/
 ---
 
-<center><b>Under Construction</b></center>
-
 {% assign sorted_publications = site.data.publications | group_by: "type" %}
 
 {% for type in sorted_publications %}
@@ -14,6 +12,11 @@ permalink: /publications/
     *Authors*: {{ publication.authors }}  
     *Venue*: {{ publication.venue }}  
     *Year*: {{ publication.year }}  
-    [Link]({{ publication.link }})
+    <a href="{{ publication.link }}" target="_blank" style="display: inline-block; vertical-align: middle;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF" width="20" height="20" style="vertical-align: middle;" />
+    </a>
+    {% if publication.video %}
+    <iframe width="374" height="210" src="{{ publication.video }}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
 {% endfor %}
 {% endfor %}
