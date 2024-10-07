@@ -4,17 +4,17 @@
   href: /
 - text: Research
   href: /research/
-  under_construction: true
+  under_construction: false
 - text: Team
   href: /team/
 - text: Publications
   href: /publications/
-  under_construction: true
+  under_construction: false
 - text: News
   href: /news/
 - text: Joining
   href: /joining/
-  under_construction: true
+  under_construction: false
 #- text: About
 #  href: /about/
 #- text: Team

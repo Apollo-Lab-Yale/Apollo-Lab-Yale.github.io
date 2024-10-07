@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Apollo Lab
-description: Applied Planning, Learning, and Optimization
+description: Applied Planning, Learning, and Optimization Lab @ Yale University
 background: /assets/theme/images/homepage-background.png
 permalink: /
 ---

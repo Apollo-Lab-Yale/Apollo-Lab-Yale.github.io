@@ -33,15 +33,76 @@
   image: assets/theme/images/team/liam_merz_hoffmeister.jpg
   github: LiamMZ
 
-#- role_separator: Master's Students
+- name: Chen Liang
+  role: Ph.D. Student
+  image: 
+  website: https://liangchen.space/
+
+- name: TJ Vitchutripop
+  role: Ph.D. Student
+  image: 
+  website: https://tjvitchutripop.github.io/
+
+- name: Peter Wang
+  role: Ph.D. Student
+  image: 
+  website: https://pwang649.github.io/
+
+- role_separator: Master's Students
+
+- name: Yinliang Chen
+  role: Master's Student
+  image: 
+
+- name: Alan Li
+  role: Master's Student
+  image: 
+
+- role_separator: Undergraduate Research Managers
+
+- name: Ryan Tsai
+  role: Undergraduate Research Manager
+  image: 
+
+- name: Roshan Klein-Seetharaman
+  role: Undergraduate Research Manager
+  image: 
 
 - role_separator: Undergraduate Students
 
-- name: Ryan Tsai
+- name: Ian Lim
   role: Undergraduate Student
-  image: 
+  image:
 
-- name: Sem Asmelash
+- name: Andrew Fu
+  role: Undergraduate Student
+  image:
+
+- name: Ryan Jin
+  role: Undergraduate Student
+  image:
+
+- name: Blaze Goldstein
+  role: Undergraduate Student
+  image:
+
+- name: Anand Srinivasan
+  role: Undergraduate Student
+  image:
+
+- name: Haroon Mohamedali
+  role: Undergraduate Student
+  image:
+
+- name: Richard Xue
+  role: Undergraduate Student
+  image:
+
+- name: Byron Li
+  role: Undergraduate Student
+  image:
+
+- name: Griffin Thompson
   role: Undergraduate Student
   image:
 
@@ -52,4 +113,9 @@
 - name: Jack Chen
   role: Undergraduate Student
   image:
-#- role_separator: Alumni
+
+- role_separator: Alumni
+
+- name: Sem Asmelash
+  role: Undergraduate Student
+  image:

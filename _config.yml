@@ -8,15 +8,15 @@ baseurl: "/"                   # Only required if your site is in a directory e.
 # SOCIAL PROFILES
 social:
   email: daniel.rakita@yale.edu
-  twitter: djrakita10
+  # twitter: djrakita10
   github: Apollo-Lab-Yale               # Can also be a github_username/repository
   #mastodon: https://mastodon.social/@mastodon_username
   #facebook:                             # A URL
   #disqus: disqus_sitename               # Enable Disqus comments from disqus_sitename.disqus.com
 
 # THEME SETTINGS (ALL OPTIONAL)
-posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
-tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
+posts_on_home: 4                        # Show x number of latest posts on homepage, can be 0
+tweets_on_home: false                    # Show Twitter feed of social.twitter on homepage
 #archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
 #github_edit: true                       # Show an "edit this page" link in the footer, can also be name of branch (default: main)
 
