@@ -1,3 +1,11 @@
+- title: "Sequential Discrete Action Selectionvia Blocking Conditions and Resolutions"
+  authors: "Liam Merz Hoffmeister, Brian Scassellati, Daniel Rakita"
+  type: "Conference"
+  venue: "IROS"
+  year: 2024
+  link: "https://arxiv.org/pdf/2409.08410"
+  # video: "https://www.youtube.com/embed/BrVUlQ4Tixw?si=KtYwQ9QiZSsLy0Bl"
+
 - title: "An Analysis of Unified Manipulation with Robot Arms and Dexterous Hands via Optimization-based Motion Synthesis"
   authors: "Vatsal Patel, Daniel Rakita, Aaron Dollar"
   type: "Conference"
