@@ -9,4 +9,4 @@ If you would like to work in the APOLLO Lab at Yale as a PhD student research as
 
 ### Undergraduate Research Positions
 
-We are always looking for motivated undergraduate researchers to help on or lead various projects in the lab.  If you are an undergraduate student already at Yale and interested in research pertaining to robot planning, learning, or optimization, please email Daniel Rakita at [daneil.rakita@yale.edu](mailto:daniel.rakita@yale.edu).        
+We are always looking for motivated undergraduate researchers to help on or lead various projects in the lab.  If you are an undergraduate student already at Yale and interested in research pertaining to robot planning, learning, or optimization, please email Daniel Rakita at [daniel.rakita@yale.edu](mailto:daniel.rakita@yale.edu).        
