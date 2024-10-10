@@ -35,8 +35,9 @@
 
 - name: Chen Liang
   role: Ph.D. Student
-  image: 
+  image: assets/theme/images/team/chen_liang.jpg
   website: https://liangchen.space/
+  googlescholar: PaD2C_8AAAAJ
 
 - name: TJ Vitchutripop
   role: Ph.D. Student
