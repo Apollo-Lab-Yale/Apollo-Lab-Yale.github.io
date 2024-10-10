@@ -56,7 +56,9 @@
 
 - name: Yinliang Chen
   role: Master's Student
-  image: 
+  website: https://www.cylq.top/
+  image: assets/theme/images/team/yinliang_chen.jpg
+  github: cylqqqcyl
 
 - name: Alan Li
   role: Master's Student
