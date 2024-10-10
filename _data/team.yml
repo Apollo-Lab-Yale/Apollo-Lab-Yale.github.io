@@ -46,8 +46,10 @@
 
 - name: Peter Wang
   role: Ph.D. Student
-  image: 
+  image: assets/theme/images/team/peter_wang.jpg
   website: https://pwang649.github.io/
+  github: pwang649
+  googlescholar: Jq6AZYsAAAAJ&hl
 
 - role_separator: Master's Students
 
