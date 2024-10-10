@@ -40,8 +40,9 @@
 
 - name: TJ Vitchutripop
   role: Ph.D. Student
-  image: 
+  image: assets/theme/images/team/tj_vitchutripop.jpg
   website: https://tjvitchutripop.github.io/
+  github: tjvitchutripop
 
 - name: Peter Wang
   role: Ph.D. Student
