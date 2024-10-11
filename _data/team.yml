@@ -62,7 +62,8 @@
 
 - name: Alan Li
   role: Master's Student
-  image: 
+  website: https://www.alanlcr.com/
+  image: assets/theme/images/team/alan_li.jpg
 
 - role_separator: Undergraduate Research Managers
 
