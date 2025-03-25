@@ -77,6 +77,10 @@
 
 - role_separator: Undergraduate Students
 
+- name: Juliette Garcia
+  role: Undergraduate Student
+  image:
+
 - name: Eric Wang
   role: Undergraduate Student
   image:
