@@ -1,3 +1,32 @@
+- title: "ad-trait: A Fast and Flexible Automatic Differentiation Library in Rust"
+  authors: "Chen Liang, Peter Wang, Andy Xu, Daniel Rakita"
+  type: "Conference"
+  venue: "IROS"
+  year: 2025
+  link: "https://arxiv.org/abs/2504.15976"
+
+- title: "Towards Zero-Knowledge Task Planning via a Language-based Approach"
+  authors: "Liam Merz Hoffmeister, Brian Scassellati, Daniel Rakita"
+  type: "Conference"
+  venue: "IROS"
+  year: 2025
+
+- title: "Coherence-based Approximate Derivatives via Web of Affine Spaces Optimization"
+  authors: "Daniel Rakita, Chen Liang, Qian Wang"
+  type: "Conference"
+  venue: "RSS"
+  year: 2025
+  link: "https://arxiv.org/abs/2504.18790"
+  video: "https://www.youtube.com/embed/gOTcZ4bK9Ao?si=NmcjUUoRwLebenk7"
+
+- title: "Dynamic Rank Adjustment in Diffusion Policies for Efficient and Flexible Training"
+  authors: "Xiatao Sun, Shuo Yang, Yinxing Chen, Francis Fan, Yiyan Liang, Daniel Rakita"
+  type: "Conference"
+  venue: "RSS"
+  year: 2025
+  link: "https://arxiv.org/abs/2502.03822"
+  # video: "https://www.youtube.com/embed/BrVUlQ4Tixw?si=KtYwQ9QiZSsLy0Bl"
+
 - title: "Sequential Discrete Action Selectionvia Blocking Conditions and Resolutions"
   authors: "Liam Merz Hoffmeister, Brian Scassellati, Daniel Rakita"
   type: "Conference"
