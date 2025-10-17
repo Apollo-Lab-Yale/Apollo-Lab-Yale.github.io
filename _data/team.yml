@@ -62,6 +62,10 @@
 
 - role_separator: Undergraduate Students
 
+- name: Omar Abdellall
+  role: Undergraduate Student
+  image:
+
 - name: Jack Chen
   role: Undergraduate Student
   image:
