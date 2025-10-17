@@ -20,6 +20,21 @@
 
 - role_separator: Ph.D. Students
 
+- name: Roshan Klein-Seetharaman
+  role: Ph.D. Student
+  image: 
+
+- name: Chen Liang
+  role: Ph.D. Student
+  image: assets/theme/images/team/chen_liang.jpg
+  website: https://liangchen.space/
+  googlescholar: PaD2C_8AAAAJ
+
+- name: Liam Merz Hoffmeister
+  role: Ph.D. Student
+  image: assets/theme/images/team/liam_merz_hoffmeister.jpg
+  github: LiamMZ
+
 - name: Xiatao Sun
   role: Ph.D. Student
   website: https://sunxiatao.me/
@@ -27,17 +42,6 @@
   github: M4D-SC1ENTIST
   email: xiatao.sun@yale.edu
   image: assets/theme/images/team/xiatao_sun.jpg
-
-- name: Liam Merz Hoffmeister
-  role: Ph.D. Student
-  image: assets/theme/images/team/liam_merz_hoffmeister.jpg
-  github: LiamMZ
-
-- name: Chen Liang
-  role: Ph.D. Student
-  image: assets/theme/images/team/chen_liang.jpg
-  website: https://liangchen.space/
-  googlescholar: PaD2C_8AAAAJ
 
 - name: TJ Vitchutripop
   role: Ph.D. Student
@@ -52,7 +56,35 @@
   github: pwang649
   googlescholar: Jq6AZYsAAAAJ&hl
 
-- role_separator: Master's Students
+# - role_separator: Master's Students
+
+# - role_separator: Undergraduate Research Managers
+
+- role_separator: Undergraduate Students
+
+- name: Jack Chen
+  role: Undergraduate Student
+  image:
+
+- name: Derek Gao
+  role: Undergraduate Student
+  image:
+
+- name: Francis Fan
+  role: Undergraduate Student
+  image:
+
+- name: Brianna Alexandra Stan
+  role: Undergraduate Student
+  image:
+
+- name: Alex Wa
+  role: Undergraduate Student
+  image:
+
+
+
+- role_separator: Alumni
 
 - name: Yinliang Chen
   role: Master's Student
@@ -65,27 +97,11 @@
   website: https://www.alanlcr.com/
   image: assets/theme/images/team/alan_li.jpg
 
-- role_separator: Undergraduate Research Managers
-
-- name: Ryan Tsai
-  role: Undergraduate Research Manager
-  image: 
-
-- name: Roshan Klein-Seetharaman
-  role: Undergraduate Research Manager
-  image: 
-
-- role_separator: Undergraduate Students
-
-- name: Juliette Garcia
+- name: Sem Asmelash
   role: Undergraduate Student
   image:
 
-- name: Eric Wang
-  role: Undergraduate Student
-  image:
-
-- name: Alex Wa
+- name: Griffin Thompson
   role: Undergraduate Student
   image:
 
@@ -145,20 +161,15 @@
   role: Undergraduate Student
   image:
 
-- name: Griffin Thompson
+- name: Juliette Garcia
   role: Undergraduate Student
   image:
 
-- name: Francis Fan
+- name: Eric Wang
   role: Undergraduate Student
   image:
 
-- name: Jack Chen
-  role: Undergraduate Student
-  image:
-
-- role_separator: Alumni
-
-- name: Sem Asmelash
-  role: Undergraduate Student
-  image:
+- name: Ryan Tsai
+  role: Undergraduate Research Manager
+  image: 
+  # description: (Now Masters student at University of Michigan)

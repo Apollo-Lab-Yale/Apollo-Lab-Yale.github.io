@@ -4,6 +4,17 @@
 # This frontmatter ensures Jekyll reads this file and converts it to main.css
 ---
 
+// Force sans-serif across the site
+$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$headings-font-family: $font-family-sans-serif;
+
+// keep theme var in sync (if used elsewhere)
+$custom_font: $font-family-sans-serif;
+
+
+//////////////
+
 // Set customizable colors
 //
 // Set default colors
@@ -32,6 +43,8 @@ $custom_footer_color: nth($custom_footer_color, -1);
 
 // Set font
 $custom_font: {% if site.font_serif != false %}Lora{% else %}system-ui{% endif %};
+// $custom_font: {% if site.font_serif == true %}Lora, serif{% else %}system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif{% endif %};
+
 
 // Set enable-rounded
 $enable-rounded: {% if site.rounded_corners != false %}true{% else %}false{% endif %};
