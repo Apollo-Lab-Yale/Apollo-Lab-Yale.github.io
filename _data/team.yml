@@ -93,13 +93,13 @@
 - name: Yinliang Chen
   role: Master's Student
   website: https://www.cylq.top/
-  image: assets/theme/images/team/yinliang_chen.jpg
-  github: cylqqqcyl
+  # image: assets/theme/images/team/yinliang_chen.jpg
+  # github: cylqqqcyl
 
 - name: Alan Li
   role: Master's Student
   website: https://www.alanlcr.com/
-  image: assets/theme/images/team/alan_li.jpg
+  # image: assets/theme/images/team/alan_li.jpg
 
 - name: Sem Asmelash
   role: Undergraduate Student
