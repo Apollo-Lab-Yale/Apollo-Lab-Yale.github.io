@@ -65,13 +65,7 @@ permalink: /publications/
         </select>
       </div>
       
-      <div class="col-md-3 mb-3">
-        <label for="filter-keyword" style="font-weight: 500; font-size: 0.9em; color: #555;">Keyword</label>
-        <select id="filter-keyword" class="form-control filter-input">
-          <option value="all">All Keywords</option>
-          <!-- Options injected dynamically via JS based on YAML tags -->
-        </select>
-      </div>
+
     </div>
     
     <!-- Bottom Row: Dynamic Author Auto-Complete -->
@@ -201,28 +195,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const filterInputs = document.querySelectorAll('.filter-input');
   const pubCards = document.querySelectorAll('.pub-card');
   const authorDatalist = document.getElementById('author-list');
-  const keywordSelect = document.getElementById('filter-keyword');
 
-  // Dynamically populate Authors Datatlist and Keyword Dropdown Logic 
+  // Dynamically populate Authors Datalist
   const allAuthors = new Set();
-  const allKeywords = new Set();
 
   pubCards.forEach(card => {
-    // Collect Authors
     const authorsStr = card.getAttribute('data-authors');
     if (authorsStr) {
       authorsStr.split(',').forEach(a => {
         const cleanlyTrimmed = a.trim();
         if(cleanlyTrimmed) allAuthors.add(cleanlyTrimmed);
-      });
-    }
-    
-    // Collect Keywords
-    const keywordsStr = card.getAttribute('data-keywords');
-    if (keywordsStr) {
-      keywordsStr.split(',').forEach(k => {
-        const cleanlyTrimmed = k.trim();
-        if(cleanlyTrimmed) allKeywords.add(cleanlyTrimmed);
       });
     }
   });
@@ -233,21 +215,12 @@ document.addEventListener('DOMContentLoaded', function() {
     option.value = author;
     authorDatalist.appendChild(option);
   });
-  
-  // Inject Keywords dynamically into the keyword select dropdown
-  [...allKeywords].sort().forEach(keyword => {
-    const option = document.createElement('option');
-    option.value = keyword.toLowerCase();
-    option.textContent = keyword;
-    keywordSelect.appendChild(option);
-  });
 
   function filterPublications() {
     const yearVal = document.getElementById('filter-year').value;
     const typeVal = document.getElementById('filter-type').value;
     const venueVal = document.getElementById('filter-venue').value;
     const threadVal = document.getElementById('filter-thread').value;
-    const keywordVal = document.getElementById('filter-keyword').value;
     const authorVal = document.getElementById('filter-author').value.toLowerCase().trim();
 
     pubCards.forEach(card => {
@@ -271,20 +244,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
-      let matchKeyword = true;
-      if (keywordVal !== 'all') {
-        const targetKw = keywordVal.toLowerCase();
-        // Look for the keyword inside the split up array to be exact (e.g. padding and spaces)
-        matchKeyword = cKeywords.split(',').map(s => s.trim()).includes(targetKw);
-      }
-      
       let matchAuthor = true;
       if (authorVal !== '') {
         // String substring contains 
         matchAuthor = cAuthors.includes(authorVal);
       }
 
-      if (matchYear && matchType && matchVenue && matchThread && matchKeyword && matchAuthor) {
+      if (matchYear && matchType && matchVenue && matchThread && matchAuthor) {
         card.style.display = '';
       } else {
         card.style.display = 'none';
