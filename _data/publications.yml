@@ -26,6 +26,22 @@
 #           icon: "fas fa-database" # FontAwesome class
 # ==========================================
 
+- title: "Optimizing Active Perception for Learning Simultaneous Viewpoint Selection and Manipulation with Diffusion Policy"
+  authors: "Xiatao Sun, Francis Fan, Yinxing Chen, Daniel Rakita"
+  type: "Preprint"
+  # venue: "Journal of Robotic Surgery"
+  year: 2026
+  link: "https://arxiv.org/abs/2409.14615"
+  threads: ["Combining Visual + Manipulation Learning"]
+
+- title: "Deep learning approach for critical exposure during division of the inferior mesenteric artery in colorectal surgery"
+  authors: "Jay Bader, Xiatao Sun, Tripp Rosenfelt, Alexis Ramirez-Hardy, Teeratham Vitchutripop, Haddon Pantel, Amit Khanna, Daniel Rakita"
+  type: "Journal"
+  venue: "Journal of Robotic Surgery"
+  year: 2026
+  link: "https://link.springer.com/article/10.1007/s11701-025-03121-7"
+  threads: ["AI for Robotic Surgery"]
+
 - title: "APOLLO Blender: A Robotics Library for Visualization and Animation in Blender"
   authors: "Peter Messina, Daniel Rakita"
   type: "Preprint"

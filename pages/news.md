@@ -44,14 +44,7 @@ permalink: /news/
           {% endfor %}
         </select>
       </div>
-      <!-- Keyword Dropdown -->
-      <div class="col-md-3 mb-3 mb-md-0">
-        <label for="filter-keyword" class="form-label" style="font-weight: 600; font-size: 0.9em;">Keyword Filtering</label>
-        <select id="filter-keyword" class="form-control filter-input border-0 shadow-sm" style="border-radius: 8px;">
-          <option value="all">All Keywords</option>
-          <!-- Injected via JS -->
-        </select>
-      </div>
+
       <!-- Word Search -->
       <div class="col-md-3">
         <label for="filter-search" class="form-label" style="font-weight: 600; font-size: 0.9em;">Text Search</label>
@@ -167,59 +160,27 @@ function toggleNews(id) {
 document.addEventListener('DOMContentLoaded', function() {
   const filterInputs = document.querySelectorAll('.filter-input');
   const newsCards = document.querySelectorAll('.news-card');
-  const keywordSelect = document.getElementById('filter-keyword');
-
-  // Dynamically extract unique tags across all posts locally
-  const allKeywords = new Set();
-  newsCards.forEach(card => {
-    const tagsStr = card.getAttribute('data-tags');
-    if (tagsStr) {
-      tagsStr.split(',').forEach(tag => {
-        const cleanTag = tag.trim();
-        if (cleanTag) {
-          allKeywords.add(cleanTag);
-        }
-      });
-    }
-  });
-
-  // Inject keywords alphabetically into the search dropdown
-  [...allKeywords].sort().forEach(keyword => {
-    const opt = document.createElement('option');
-    opt.value = keyword;
-    // Simple title case for visuals
-    opt.textContent = keyword.charAt(0).toUpperCase() + keyword.slice(1); 
-    keywordSelect.appendChild(opt);
-  });
 
   // Core Filtering Pipeline
   function filterNews() {
     const yrVal = document.getElementById('filter-year').value;
     const tyVal = document.getElementById('filter-type').value;
-    const kwVal = document.getElementById('filter-keyword').value;
     const searchVal = document.getElementById('filter-search').value.toLowerCase().trim();
 
     newsCards.forEach(card => {
       const cYear = card.getAttribute('data-year');
       const cType = card.getAttribute('data-type');
-      const cTags = card.getAttribute('data-tags');
       const cText = card.getAttribute('data-text');
 
       const matchYear = (yrVal === 'all' || cYear === yrVal);
-      const matchType = (tyVal === 'all' || cType.includes(tyVal)); // Use includes to safely catch misspellings
-      
-      let matchKw = true;
-      if (kwVal !== 'all') {
-        matchKw = cTags.split(',').includes(kwVal);
-      }
+      const matchType = (tyVal === 'all' || cType.includes(tyVal));
       
       let matchSearch = true;
       if (searchVal !== '') {
         matchSearch = cText.includes(searchVal);
       }
 
-      // Display logic
-      if (matchYear && matchType && matchKw && matchSearch) {
+      if (matchYear && matchType && matchSearch) {
         card.style.display = '';
       } else {
         card.style.display = 'none';
