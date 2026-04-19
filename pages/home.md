@@ -7,7 +7,7 @@ permalink: /
 ---
 
 
-<div class="card elite-mesh-container shadow-sm border-0 mt-5 mb-5" style="border-radius: 24px; overflow: hidden;">
+<div class="card header bg-no-image shadow-sm border-0 mt-5 mb-5" style="border-radius: 24px; overflow: hidden; height: auto; min-height: unset; padding: 0 !important;">
   <div class="card-body p-4 p-md-5" style="position: relative; z-index: 5;">
     <div class="row align-items-center">
       <div class="col-md-1 d-none d-md-flex justify-content-center">
@@ -22,7 +22,7 @@ permalink: /
         <!-- Glassmorphic Text Container for readability -->
         <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1);">
           <p style="font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
-            Our lab is driven by the goal of enabling <strong>robots and learning systems to act and improve in real-time</strong>, directly within the dynamic, uncertain environments of the real world. We develop algorithms for fast optimization, planning, and control that allow systems to continuously update their behavior as they operate — tightly integrating perception, action, and learning so that robots can react quickly, gather the right information, and adapt their strategies on the fly.
+            Our lab is driven by the goal of enabling <strong>robots and learning systems to act and improve in real-time</strong>, directly within the dynamic, uncertain environments of the real world. We develop algorithms for fast optimization, planning, and control that allow systems to continuously update their behavior as they operate, tightly integrating perception, action, and learning so that robots can react quickly, gather the right information, and adapt their strategies on the fly.
           </p>
           <p style="font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9); margin-bottom: 0;">
             Our work spans learning, geometry, and applied math, and is motivated by domains where real-time adaptability has meaningful societal impact: <strong>home and assistive robotics</strong>, where systems must operate safely alongside people; <strong>healthcare and robotic surgery</strong>, where precision and real-time feedback are essential; and <strong>disaster response</strong>, where robots must act under uncertainty with limited prior information.
