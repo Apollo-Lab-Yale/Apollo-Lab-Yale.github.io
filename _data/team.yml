@@ -79,7 +79,7 @@
   image: assets/theme/images/team/tj_vitchutripop.jpg
   website: https://tjvitchutripop.github.io/
   github: tjvitchutripop
-  threads: ["Real-time, in situ Robot Learning", "AI in Robotic Surgery", "LLMs and VLMs for Robot Planning"]
+  threads: ["Real-time, in situ Robot Learning", "AI for Robotic Surgery", "LLMs and VLMs for Robot Planning"]
 
 - name: Xiatao Sun
   role: Ph.D. Student
@@ -88,7 +88,7 @@
   github: M4D-SC1ENTIST
   email: xiatao.sun@yale.edu
   image: assets/theme/images/team/xiatao_sun.jpg
-  threads: ["Spatial Computing for Embodied Intelligence", "Combining Visual + Manipulation Learning", "Real-time, in situ Robot Learning", "Automatic Mesh Generation for Robotics", "AI in Robotic Surgery"]
+  threads: ["Spatial Computing for Embodied Intelligence", "Combining Visual + Manipulation Learning", "Real-time, in situ Robot Learning", "Automatic Mesh Generation for Robotics", "AI for Robotic Surgery"]
 
 # - role_separator: Master's Students
 

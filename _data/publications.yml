@@ -72,7 +72,7 @@
   # venue: "ICRA"
   year: 2026
   link: "https://arxiv.org/abs/2504.20359"
-  threads: ["Spatial Computing for Embodied Intelligence"]
+  threads: ["Spatial Computing for Embodied Intelligence", "Combining Visual + Manipulation Learning"]
   # website: "https://apollo-lab-yale.github.io/26-ICRA-PRISM-DP-website/"
 
 - title: "Hybrid Diffusion Policies with Projective Geometric Algebra for Efficient Robot Manipulation Learning"
@@ -81,7 +81,7 @@
   venue: "ICRA"
   year: 2026
   link: "https://arxiv.org/abs/2507.05695"
-  threads: ["Spatial Computing for Embodied Intelligence"]
+  threads: ["Spatial Computing for Embodied Intelligence", "Combining Visual + Manipulation Learning"]
 
 - title: "Turning Stale Gradients into Stable Gradients: Coherent Coordinate Descent with Implicit Landscape Smoothing for Lightweight Zeroth-Order Optimization"
   authors: "Chen Liang, Xiatao Sun, Qian Wang, Daniel Rakita"
@@ -89,7 +89,7 @@
   # venue: "ICRA"
   year: 2026
   # link: "https://arxiv.org/abs/2512.21109"
-  threads: ["Computational Differentiation and Vector Recovery"]
+  threads: ["Computational Differentiation and Vector Recovery", "Efficient Optimizers for Neural Networks"]
 
 - title: "Robust and Efficient MuJoCo-based Model Predictive Control via Web of Affine Spaces Derivatives"
   authors: "Chen Liang, Daniel Rakita"
@@ -140,7 +140,7 @@
   authors: "Liam Merz Hoffmeister, Brian Scassellati, Daniel Rakita"
   type: "Conference"
   venue: "IROS"
-  threads: ["Combining Continuous and Discrete Reasoning for Robot manipulation"]
+  threads: ["LLMs and VLMs for Robot Planning"]
   year: 2025
   keywords: "Task Planning, LLMs"
 
@@ -149,6 +149,7 @@
   type: "Conference"
   venue: "RSS"
   year: 2025
+  threads: ["Efficient Optimizers for Neural Networks", "Computational Differentiation and Vector Recovery"]
   link: "https://arxiv.org/abs/2504.18790"
   video: "https://www.youtube.com/embed/gOTcZ4bK9Ao?si=NmcjUUoRwLebenk7"
   website: "https://apollo-lab-yale.github.io/25-RSS-WASP-website/"
@@ -168,6 +169,7 @@
   type: "Conference"
   venue: "IROS"
   year: 2024
+  threads: ["LLMs and VLMs for Robot Planning"]
   link: "https://arxiv.org/pdf/2409.08410"
   # video: "https://www.youtube.com/embed/BrVUlQ4Tixw?si=KtYwQ9QiZSsLy0Bl"
 
@@ -177,7 +179,7 @@
   venue: "ICRA"
   year: 2023
   link: "https://www.eng.yale.edu/grablab/pubs/Patel_ICRA2023.pdf"
-  threads: ["Combining Continuous and Discrete Reasoning for Robot manipulation"]
+  threads: ["Motion Generation Algorithms"]
   video: "https://www.youtube.com/embed/BrVUlQ4Tixw?si=KtYwQ9QiZSsLy0Bl"
 
 - title: "RangedIK: An Optimization-based Robot Motion Generation Method for Ranged-Goal Tasks"
@@ -193,6 +195,7 @@
   authors: "Andrew Schoen, Dakota Sullivan, Ze Dong Zhang, Daniel Rakita, Bilge Mutlu"
   type: "Conference"
   venue: "HRI"
+  threads: ["Motion Generation Algorithms"]
   year: 2023
   link: "https://peopleandrobots.wisc.edu/wp-content/uploads/sites/1469/2023/03/HRI_2023_Schoen_Sullivan_Lively.pdf" 
 
@@ -201,6 +204,7 @@
   type: "Conference"
   venue: "RSS"
   year: 2022
+  threads: ["Motion Generation Algorithms"]
   link: "https://www.roboticsproceedings.org/rss18/p043.pdf"
   video: "https://www.youtube.com/embed/A6SdyaIeTrU?si=TekbDQhPy6g3ReLB"
 
@@ -211,4 +215,5 @@
   type: "Journal"
   venue: "IEEE Robotics and Automation Letters"
   year: 2021
+  threads: ["Motion Generation Algorithms"]
   link: "https://ieeexplore.ieee.org/abstract/document/9645379"

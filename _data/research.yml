@@ -118,11 +118,13 @@
     A central theme in this research is using language and vision models to produce **explicit, grounded planning representations** instead of opaque action outputs. For manipulation, this includes converting free-form instructions into sequences of **atomic, interpretable skill elements** whose continuous parameters are grounded in the current scene, making plans easier to inspect, modify, and reuse. At the task level, we investigate how LLMs can support **sequential action selection**, choosing the next best action based on current obstacles, failed attempts, and blocking conditions, rather than relying only on fixed action scripts or exhaustive search.
 
     We are also interested in pushing planning toward settings with **minimal task-specific engineering**. This includes frameworks in which an LLM decomposes instructions, generates executable behavior structures, and refines them online when execution errors occur. Together, this work aims to leverage LLMs and VLMs not just for generating plausible plans, but for enabling robot planning systems that are **grounded, transparent, and robust to changing real-world conditions**.
-  # selected_publications: 
+  selected_publications: 
+    - "Towards Zero-Knowledge Task Planning via a Language-based Approach"
+    - "Language-Guided Robotic Task Planning with Hierarchical Skill Decomposition"
   
 
 
-- title: "AI in Robotic Surgery"
+- title: "AI for Robotic Surgery"
   icon: "fa-solid fa-laptop-medical"
   content: |
     We explore how **artificial intelligence can enhance robotic surgery** by extracting actionable insights from intraoperative data and enabling more precise, data-driven decision-making. With the rapid growth of minimally invasive and robotic-assisted procedures, surgical video has become a rich but underutilized source of information about technique, performance, and outcomes. Our work focuses on transforming these raw data streams into **quantitative, interpretable metrics** that can support both surgeons and learning systems.
