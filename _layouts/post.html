@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article class="post-content mt-4 mb-5 pb-5 mx-auto" style="max-width: 900px;">
+  
+  <div class="card shadow-sm border-0" style="border-radius: 16px; overflow: hidden; border-top: 5px solid #3b82f6 !important;">
+    <div class="card-body p-4 p-md-5">
+      
+      <!-- The actual content of the post -->
+      <div class="post-text text-secondary" style="font-size: 1.15rem; line-height: 1.8;">
+        <!-- If the post text is completely empty, encourage them to provide details -->
+        {% if content == blank or content == "" %}
+          <p class="text-center my-5 text-muted">
+            <i class="fas fa-info-circle mb-3 fa-2x"></i><br>
+            Please check the main news feed title and description for details.
+          </p>
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </div>
+      
+      <div class="mt-5 pt-4 border-top text-center position-relative" style="z-index: 2;">
+        <a href="{{ '/news/' | relative_url }}" class="btn btn-outline-primary rounded-pill px-4 shadow-sm" style="font-weight: 600; border-width: 2px;">
+          <i class="fas fa-arrow-left me-2"></i> Back to News Feed
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+</article>

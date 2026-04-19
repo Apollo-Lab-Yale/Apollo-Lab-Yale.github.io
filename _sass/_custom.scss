@@ -1,3 +1,301 @@
-// Custom styling
-// 
-// Include the file _sass/_custom.scss to your site to add custom styling
+/* 
+ * Custom Global Aesthetic Overrides
+ * Transforms standard Bootstrap into a premium, modern, glassmorphic layout.
+ */
+
+/* Typography & Backgrounds */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  background-color: #f8fafc !important; /* Extremely soft off-white */
+  color: #334155 !important; /* Soft slate text for readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+  letter-spacing: -0.025em;
+  color: #1e293b; /* Near black */
+}
+
+/* Glassmorphism Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  
+  /* Make Complete Top Bar Sticky */
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1030 !important;
+}
+
+.navbar-brand {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+.nav-link {
+  font-weight: 600 !important;
+  transition: color 0.15s ease-in-out;
+}
+
+/* Cards & Elevated Containers */
+.card {
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025) !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Create the "alive" micro-animation on hover */
+.card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Soft, Pil-Shaped Buttons */
+.btn {
+  border-radius: 9999px !important; /* Perfect Pill */
+  font-weight: 600 !important;
+  padding: 0.4rem 1.25rem !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  letter-spacing: 0.01em;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Badges */
+.badge {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 0.4em 0.8em !important;
+  letter-spacing: 0.02em;
+}
+
+/* Structural Header Refinement */
+.pub-header {
+  border-bottom: 2px solid #e2e8f0 !important;
+  padding-bottom: 0.5rem;
+}
+
+/* Modern Input Forms (Search Bar) */
+.form-control, .input-group-text {
+  border-radius: 12px;
+  border-color: #e2e8f0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.15) !important;
+}
+
+/* Fix input group corners */
+.input-group > .form-control:not(:last-child), .input-group > .input-group-prepend > .input-group-text {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.input-group > .form-control:not(:first-child), .input-group > .input-group-append > .btn {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+/* Elite Mesh Container System */
+.elite-mesh-container {
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1;
+  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%) !important;
+}
+
+/* The Noise Texture Overlay */
+.elite-mesh-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+/* Moving Mesh Blobs */
+.elite-mesh-container::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.7) 0%, transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.6) 0%, transparent 45%),
+    radial-gradient(circle at 40% 70%, rgba(34, 211, 238, 0.5) 0%, transparent 45%),
+    radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.4) 0%, transparent 45%);
+  filter: blur(70px);
+  animation: eliteBlobMotion 12s linear infinite;
+  z-index: 1;
+}
+
+/* Premium Page Headers - ELITE Transformation */
+.header {
+  color: #ffffff !important;
+  margin-bottom: 3rem !important;
+  position: relative;
+  overflow: hidden;
+  background-color: #1d4ed8 !important; /* Fallback base color */
+}
+
+/* Page Header Specialization */
+.header.bg-no-image {
+  @extend .elite-mesh-container;
+  padding: 6rem 1rem !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+@keyframes eliteBlobMotion {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* The Glass Card Container 2.0 */
+.header-glass-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(24px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+  border-radius: 32px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 3.5rem 2.5rem !important;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3) !important;
+  position: relative;
+  z-index: 3;
+}
+
+/* Minimalist Accent Label */
+.header-accent-label {
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.25em !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.header-accent-label::before, .header-accent-label::after {
+  content: "";
+  height: 1px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-glass-card h1 {
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  margin-bottom: 1.25rem !important;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.1 !important;
+}
+
+.header-glass-card .lead {
+  font-size: 1.35rem !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  max-width: 650px;
+  margin: 0 auto !important;
+  opacity: 0.85;
+}
+
+/* Homepage Specific Hero Banner Refinement */
+.header.home-header {
+  height: 280px !important;
+  min-height: 280px !important;
+  padding: 4rem 0 !important;
+  background-attachment: fixed !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Instant Elite Tooltips */
+.elite-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.elite-tooltip-text {
+  visibility: hidden;
+  width: 180px;
+  background-color: #1e293b;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 100;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  margin-left: -90px;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  transform: translateY(10px);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  pointer-events: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.elite-tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1e293b transparent transparent transparent;
+}
+
+.elite-tooltip-wrapper:hover .elite-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .header-glass-card {
+    padding: 2.5rem 1.5rem !important;
+    border-radius: 24px !important;
+  }
+  .header-glass-card h1 {
+    font-size: 2.5rem !important;
+  }
+  .header.bg-no-image {
+    padding: 4rem 1rem !important;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .header.bg-no-image {
+    padding: 0.75rem 2rem !important; /* Very Short */
+  }
+}

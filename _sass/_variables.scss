@@ -5,9 +5,11 @@
 // or variables (indicated with !default) that are referred by other variables.
 
 // Color system
+$apollo-primary: #3b82f6;
+$apollo-dark: #1e293b;
 
-$primary: $custom_link_color;
-$secondary: $custom_banner_color;
+$primary: $apollo-primary;
+$secondary: $apollo-primary;
 $footer: $custom_footer_color; // Theme variable
 
 // Characters which are escaped by the escape-svg function

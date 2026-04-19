@@ -1,15 +1,28 @@
+{% if page.layout != 'home' %}
 {% comment %}background is defined in head.html{% endcomment %}
-{% if background %}
-  <header class="header bg-image" style="background-image: url('{{ background | relative_url }}')">
+{% assign ignore_image = false %}
+{% if page.collection == 'posts' %}
+  {% assign ignore_image = true %}
+{% endif %}
+
+{% if background and ignore_image == false %}
+  <header class="header bg-image{% if page.layout == 'home' %} home-header{% endif %}" style="background-image: url('{{ background | relative_url }}')">
 {% else %}
   <header class="header bg-no-image">
 {% endif %}
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 position-relative mx-auto">
-          <h1{% if page.layout == 'home' %} class="home"{% endif %}>{{ page.title }}</h1>
-          
-          <div class="lead">{{ page.description | markdownify }}</div>
+          {% if page.layout != 'home' %}
+            <div class="header-glass-card shadow-lg animate__animated animate__fadeInUp">
+              <div class="header-accent-label">Section Overview</div>
+              <h1{% if page.layout == 'home' %} class="home"{% endif %}>{{ page.title }}</h1>
+              
+              {% if page.description %}
+                <div class="lead">{{ page.description | markdownify }}</div>
+              {% endif %}
+            </div>
+          {% endif %}
           
           {% if page.collection == 'posts' %}
             <p class="meta">
@@ -40,3 +53,4 @@
       </div>
     {% endif %}
   </header>
+{% endif %}

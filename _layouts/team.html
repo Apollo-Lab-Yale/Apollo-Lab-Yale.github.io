@@ -11,79 +11,117 @@ description: Template for team page.
 
 {{ content }}
 
-{% for member in team %}
-  <div class="d-flex team-member">
+<style>
+  /* Fix AnchorJS font alignment issues and centering shift */
+  .anchorjs-link {
+    position: absolute !important;
+    margin-left: 0.5rem !important;
+    text-decoration: none !important;
+  }
+</style>
 
-    {% if member.role_separator %} 
-      <div>
-        <h2><b>{{ member.role_separator }}</b></h2>
+<div class="team-container mt-4">
+
+  {%- assign section_names = "Faculty,Ph.D. Students,Undergraduate Students,Alumni" | split: "," -%}
+  
+  {%- for section_name in section_names -%}
+    
+    {%- if section_name == "Alumni" -%}
+      {%- comment -%} ALUMNI SECTION: Toggled collapse with Unified Grid {%- endcomment -%}
+      <div class="mt-5 mb-4 text-center">
+        <button class="btn btn-outline-primary px-4 py-2 shadow-sm font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#alumniCollapse" aria-expanded="false" aria-controls="alumniCollapse" style="border-radius: 30px; font-size: 1.1rem; border-width: 2px;">
+          View Alumni <i class="fas fa-users ms-2"></i>
+        </button>
       </div>
-    {% endif %}
-
-    <div class="flex-shrink-1 me-3">
-      {% if member.image %}
-        <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
-      {% endif %}
-    </div>
-
-    <div>
-      <h5 id="{{ member.name | strip | url_encode }}">
-        <!-- add hyperlink to personal website on member.name-->
-        {% if member.website %}
-          <a href="{{ member.website }}">{{ member.name }}</a>
-        {% else %}
-          {{ member.name }}
-        {% endif %}
-        {% if member.role %}
-          <small class="text-muted">| {{ member.role }}</small>
-        {% endif %}
-      </h5>
-
-      {{ member.description | markdownify }}
-
-      <ul class="list-inline">
-        {% if member.orcid %}
-          <li class="list-inline-item">
-            <a href="https://orcid.org/{{ member.orcid }}"><i class="ai ai-orcid"></i></a>
-          </li>
-        {% endif %}
-
-        {% if member.researchgate %}
-          <li class="list-inline-item">
-            <a href="https://researchgate.net/profile/{{ member.researchgate }}"><i class="ai ai-researchgate"></i></a>
-          </li>
-        {% endif %}
+      <div class="collapse" id="alumniCollapse">
+        {%- comment -%} Gather ALL Alumni and sort by Rank Priority then Last Name {%- endcomment -%}
+        {%- assign alumni_sorted_keys = "" -%}
+        {%- assign in_alumni_section = false -%}
         
-        {% if member.googlescholar %}
-          <li class="list-inline-item">
-            <a href="https://scholar.google.com/citations?user={{ member.googlescholar }}"><i class="ai ai-google-scholar"></i></a>
-          </li>
-        {% endif %}
+        {%- for member in team -%}
+          {%- if member.role_separator -%}
+            {%- if member.role_separator == "Alumni" -%}{%- assign in_alumni_section = true -%}{%- else -%}{%- assign in_alumni_section = false -%}{%- endif -%}
+            {%- continue -%}
+          {%- endif -%}
+          
+          {%- if in_alumni_section -%}
+            {%- assign rank = "9" -%}
+            {%- if member.role == "Postdoctoral Researcher" -%}{%- assign rank = "1" -%}
+            {%- elsif member.role == "Ph.D. Student" -%}{%- assign rank = "2" -%}
+            {%- elsif member.role == "Master's Student" -%}{%- assign rank = "3" -%}
+            {%- elsif member.role == "Undergraduate Student" -%}{%- assign rank = "4" -%}
+            {%- endif -%}
+            
+            {%- assign m_idx = forloop.index0 -%}
+            {%- assign n_p = member.name | split: " " -%}
+            {%- if n_p.size >= 3 -%}
+              {%- assign l_n = "" -%}{%- for part in n_p offset:1 -%}{%- assign l_n = l_n | append: part | append: " " -%}{%- endfor -%}{%- assign l_n = l_n | strip | downcase -%}
+            {%- else -%}{%- assign l_n = n_p | last | downcase -%}{%- endif -%}
+            {%- assign f_n = n_p | first | downcase -%}
+            
+            {%- assign s_k = rank | append: "_" | append: l_n | append: "_" | append: f_n | append: "||" | append: m_idx -%}
+            {%- assign alumni_sorted_keys = alumni_sorted_keys | append: s_k | append: "," -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- assign final_alumni_keys = alumni_sorted_keys | split: "," | sort -%}
+        
+        {%- if final_alumni_keys.size > 0 -%}
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-0">
+            {%- for key in final_alumni_keys -%}
+              {%- assign p = key | split: "||" -%}
+              {%- assign idx = p | last | plus: 0 -%}
+              {%- assign member = team[idx] -%}
+              <div class="col">
+                {%- include team_member_card.html -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- else -%}
+      {%- comment -%} STANDARD SECTIONS: Heading then Alphabetical Grid {%- endcomment -%}
+      <h2 class="w-100 mt-5 mb-4 font-weight-bold" style="color: #1e293b; letter-spacing: -0.02em; border-bottom: 3px solid #3b82f6; padding-bottom: 0.5rem;">
+        {{ section_name }}
+      </h2>
+      
+      {%- assign section_keys = "" -%}
+      {%- assign in_target_section = false -%}
+      
+      {%- for member in team -%}
+        {%- if member.role_separator -%}
+          {%- if member.role_separator == section_name -%}{%- assign in_target_section = true -%}{%- else -%}{%- assign in_target_section = false -%}{%- endif -%}
+          {%- continue -%}
+        {%- endif -%}
+        
+        {%- if in_target_section -%}
+          {%- assign m_idx = forloop.index0 -%}
+          {%- assign n_p = member.name | split: " " -%}
+          {%- if n_p.size >= 3 -%}
+            {%- assign l_n = "" -%}{%- for part in n_p offset:1 -%}{%- assign l_n = l_n | append: part | append: " " -%}{%- endfor -%}{%- assign l_n = l_n | strip | downcase -%}
+          {%- else -%}{%- assign l_n = n_p | last | downcase -%}{%- endif -%}
+          {%- assign f_n = n_p | first | downcase -%}
+          
+          {%- assign s_k = l_n | append: "_" | append: f_n | append: "||" | append: m_idx -%}
+          {%- assign section_keys = section_keys | append: s_k | append: "," -%}
+        {%- endif -%}
+      {%- endfor -%}
+      
+      {%- assign final_section_keys = section_keys | split: "," | sort -%}
+      
+      {%- if final_section_keys.size > 0 -%}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-0">
+          {%- for key in final_section_keys -%}
+            {%- assign p = key | split: "||" -%}
+            {%- assign idx = p | last | plus: 0 -%}
+            {%- assign member = team[idx] -%}
+            <div class="col">
+              {%- include team_member_card.html -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
 
-        {% if member.twitter %}
-          <li class="list-inline-item">
-            <a href="https://twitter.com/{{ member.twitter }}"><i class="fab fa-twitter"></i></a>
-          </li>
-        {% endif %}
-
-        {% if member.mastodon %}
-          <li class="list-inline-item">
-            <a href="{{ member.mastodon }}"><i class="fab fa-mastodon"></i></a>
-          </li>
-        {% endif %}
-
-        {% if member.github %}
-          <li class="list-inline-item">
-            <a href="https://github.com/{{ member.github }}"><i class="fab fa-github"></i></a>
-          </li>
-        {% endif %}
-
-        {% if member.email %}
-          <li class="list-inline-item">
-            <a href="mailto:{{ member.email }}"><i class="far fa-envelope"></i></a>
-          </li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
-{% endfor %}
+</div>

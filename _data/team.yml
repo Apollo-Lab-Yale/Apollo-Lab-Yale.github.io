@@ -1,9 +1,36 @@
-# Project team members listed below will appear on the /team page
+# ==========================================
+# HOW TO ADD TEAM MEMBERS
+# ==========================================
+# This file controls the /team page. Members are grouped by 
+# `role_separator` headings in the order they appear here.
+#
+# CORE FIELDS:
+#   name:  (Required) Full name.
+#   role:  (Required) Displayed next to name (e.g., PI, Ph.D. Student).
+#   image: (Optional) Path to headshot in assets/theme/images/team/.
+#
+# SOCIAL & ACADEMIC (Optional):
+#   website:       Full URL to personal website.
+#   email:         Full email address.
+#   googlescholar: Google Scholar ID or full link.
+#   github:        GitHub username.
+#   orcid:         ORCID ID (e.g., 0000-0000-0000-0000).
+#   twitter:       Twitter/X username.
+#   mastodon:      Full URL to Mastodon profile.
+#   researchgate:  ResearchGate username.
+#
+# CROSS-LINKING & ADDITIONAL INFO (Optional):
+#   threads: Array of research thread titles this person belongs to.
+#            Example: threads: ["Motion Generation Algorithms"]
+#   now_at:  For alumni, brief note on current location.
+#            Example: now_at: "Now Master's student at UMich"
+#   description: A longer bio. Supports Markdown.
+# ==========================================
 
 - role_separator: Faculty
 
 - name: Daniel Rakita
-  role: Principle Investigator # Will appear next to name
+  role: Principal Investigator # Will appear next to name
   website: https://dannyrakita.net/
   image: assets/theme/images/team/daniel_rakita.jpg # Can be external link
   #description: > # Can be Markdown
@@ -15,25 +42,44 @@
   #mastodon: https://mastodon.social/@mastodon_username
   github: djrakita
   email: daniel.rakita@yale.edu
+  threads: []
 
 #- role_separator: Postdoctoral Researchers
 
 - role_separator: Ph.D. Students
-
-- name: Roshan Klein-Seetharaman
-  role: Ph.D. Student
-  image: assets/theme/images/team/roshan_klein_seetharaman.png
 
 - name: Chen Liang
   role: Ph.D. Student
   image: assets/theme/images/team/chen_liang.jpg
   website: https://liangchen.space/
   googlescholar: PaD2C_8AAAAJ
+  threads: ["Efficient Optimizers for Neural Networks", "Computational Differentiation and Vector Recovery", "Motion Generation Algorithms"]
 
 - name: Liam Merz Hoffmeister
   role: Ph.D. Student
   image: assets/theme/images/team/liam_merz_hoffmeister.jpg
   github: LiamMZ
+  threads: ["LLMs and VLMs for Robot Planning", "Automatic Mesh Generation for Robotics"]
+
+- name: Peter Wang
+  role: Ph.D. Student
+  image: assets/theme/images/team/peter_wang.jpg
+  website: https://pwang649.github.io/
+  github: pwang649
+  googlescholar: Jq6AZYsAAAAJ&hl
+  threads: ["Automatic Mesh Generation for Robotics", "Motion Generation Algorithms", "Computational Differentiation and Vector Recovery"]
+
+- name: Roshan Klein-Seetharaman
+  role: Ph.D. Student
+  image: assets/theme/images/team/roshan_klein_seetharaman.png
+  threads: ["Spatial Computing for Embodied Intelligence", "Software Tools for Robotics Research"]
+
+- name: TJ Vitchutripop
+  role: Ph.D. Student
+  image: assets/theme/images/team/tj_vitchutripop.jpg
+  website: https://tjvitchutripop.github.io/
+  github: tjvitchutripop
+  threads: ["Real-time, in situ Robot Learning", "AI in Robotic Surgery", "LLMs and VLMs for Robot Planning"]
 
 - name: Xiatao Sun
   role: Ph.D. Student
@@ -42,19 +88,7 @@
   github: M4D-SC1ENTIST
   email: xiatao.sun@yale.edu
   image: assets/theme/images/team/xiatao_sun.jpg
-
-- name: TJ Vitchutripop
-  role: Ph.D. Student
-  image: assets/theme/images/team/tj_vitchutripop.jpg
-  website: https://tjvitchutripop.github.io/
-  github: tjvitchutripop
-
-- name: Peter Wang
-  role: Ph.D. Student
-  image: assets/theme/images/team/peter_wang.jpg
-  website: https://pwang649.github.io/
-  github: pwang649
-  googlescholar: Jq6AZYsAAAAJ&hl
+  threads: ["Spatial Computing for Embodied Intelligence", "Combining Visual + Manipulation Learning", "Real-time, in situ Robot Learning", "Automatic Mesh Generation for Robotics", "AI in Robotic Surgery"]
 
 # - role_separator: Master's Students
 
@@ -62,15 +96,49 @@
 
 - role_separator: Undergraduate Students
 
-- name: Omar Abdellall
-  role: Undergraduate Student
-  image:
-
-- name: Jack Chen
+- name: Brianna Alexandra Stan
   role: Undergraduate Student
   image:
 
 - name: Derek Gao
+  role: Undergraduate Student
+  image:
+
+- name: Omar Abdellall
+  role: Undergraduate Student
+  image:
+
+- name: Alyssa Quarles
+  role: Undergraduate Student
+  image:
+
+- name: Can Erol
+  role: Undergraduate Student
+  image:
+
+- name: Matei Coldea
+  role: Undergraduate Student
+  image:
+
+- name: Matthew Sahagun
+  role: Undergraduate Student
+  image:
+
+- name: Nevin Tan
+  role: Undergraduate Student
+  image:
+
+- name: Wenhe Zhang
+  role: Undergraduate Student
+  image:
+
+- name: Murat Khidoyatov
+  role: Undergraduate Student
+  image:
+
+- role_separator: Alumni
+
+- name: Alex Wa
   role: Undergraduate Student
   image:
 
@@ -78,62 +146,22 @@
   role: Undergraduate Student
   image:
 
-- name: Brianna Alexandra Stan
+- name: Jack Chen
   role: Undergraduate Student
   image:
-
-- name: Alex Wa
-  role: Undergraduate Student
-  image:
-
-
-
-- role_separator: Alumni
-
-- name: Yinliang Chen
-  role: Master's Student
-  website: https://www.cylq.top/
-  # image: assets/theme/images/team/yinliang_chen.jpg
-  # github: cylqqqcyl
 
 - name: Alan Li
   role: Master's Student
   website: https://www.alanlcr.com/
-  # image: assets/theme/images/team/alan_li.jpg
+  image: assets/theme/images/team/alan_li.jpg
 
-- name: Sem Asmelash
-  role: Undergraduate Student
-  image:
+- name: Yinliang Chen
+  role: Master's Student
+  website: https://www.cylq.top/
+  image: assets/theme/images/team/yinliang_chen.jpg
+  # github: cylqqqcyl
 
-- name: Griffin Thompson
-  role: Undergraduate Student
-  image:
-
-- name: Andy Xu
-  role: Undergraduate Student
-  image:
-
-- name: Braeden Cullen
-  role: Undergraduate Student
-  image:
-
-- name: Derek Gao
-  role: Undergraduate Student
-  image:
-
-- name: Felicia Zheng
-  role: Undergraduate Student
-  image:
-
-- name: Jack Yin
-  role: Undergraduate Student
-  image:
-
-- name: Tim Li
-  role: Undergraduate Student
-  image:
-
-- name: Ian Lim
+- name: Anand Srinivasan
   role: Undergraduate Student
   image:
 
@@ -141,7 +169,7 @@
   role: Undergraduate Student
   image:
 
-- name: Ryan Jin
+- name: Andy Xu
   role: Undergraduate Student
   image:
 
@@ -149,15 +177,7 @@
   role: Undergraduate Student
   image:
 
-- name: Anand Srinivasan
-  role: Undergraduate Student
-  image:
-
-- name: Haroon Mohamedali
-  role: Undergraduate Student
-  image:
-
-- name: Richard Xue
+- name: Braeden Cullen
   role: Undergraduate Student
   image:
 
@@ -165,7 +185,7 @@
   role: Undergraduate Student
   image:
 
-- name: Juliette Garcia
+- name: Derek Gao
   role: Undergraduate Student
   image:
 
@@ -173,7 +193,48 @@
   role: Undergraduate Student
   image:
 
+- name: Felicia Zheng
+  role: Undergraduate Student
+  image:
+
+- name: Griffin Thompson
+  role: Undergraduate Student
+  image:
+
+- name: Haroon Mohamedali
+  role: Undergraduate Student
+  image:
+
+- name: Ian Lim
+  role: Undergraduate Student
+  image:
+
+- name: Jack Yin
+  role: Undergraduate Student
+  image:
+
+- name: Juliette Garcia
+  role: Undergraduate Student
+  image:
+
+- name: Richard Xue
+  role: Undergraduate Student
+  image:
+
+- name: Ryan Jin
+  role: Undergraduate Student
+  image:
+
 - name: Ryan Tsai
-  role: Undergraduate Research Manager
-  image: 
-  # description: (Now Masters student at University of Michigan)
+  role: Undergraduate Student
+  now_at: Now Master's student at University of Michigan
+  image:
+
+- name: Sem Asmelash
+  role: Undergraduate Student
+  now_at: Now medical student at Yale University 
+  image:
+
+- name: Tim Li
+  role: Undergraduate Student
+  image:

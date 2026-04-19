@@ -1,7 +1,7 @@
 # SITE SETTINGS
 title: Apollo Lab                       # Title in top navigation bar (navbar) and <head>
 author: Apollo Lab                    # Used for copyright statement in footer
-baseurl: "/"                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
+baseurl: ""                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
                                         # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
@@ -21,9 +21,9 @@ tweets_on_home: false                    # Show Twitter feed of social.twitter o
 #github_edit: true                       # Show an "edit this page" link in the footer, can also be name of branch (default: main)
 
 colors:
-  links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
-  banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
-  footer: "#6c757d"                     # Background color for footer: use color that contrasts well with white
+  links: "#3b82f6"                      # Vibrant Apollo Blue
+  banner: "#3b82f6"                     # Vibrant Apollo Blue 
+  footer: "#1e293b"                     # Deep Slate for footer contrast
 font_serif: false                        # Font type for page content: serif (default) or slightly smaller sans-serif
 rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons
 logo: /assets/theme/images/apollo-lab-logo.png # Logo in navbar, will be displayed with 30px height
