@@ -75,6 +75,7 @@
     Looking ahead, we are beginning to connect these ideas to the emerging perspective of **vector recovery**. Many derivative computations, especially those based on perturbations, can be interpreted as measuring **directional derivatives**, which correspond to dot products with an underlying gradient. From this viewpoint, differentiation becomes a structured recovery problem: reconstructing a vector from a set of directional measurements. This connection suggests new algorithmic directions that may enable more efficient, scalable, and noise-robust methods for computing gradients in high-dimensional systems.
   selected_publications: 
     - "Coherence-based Approximate Derivatives via Web of Affine Spaces Optimization"
+    - "ad-trait: A Fast and Flexible Automatic Differentiation Library in Rust"
 
 
 - title: "Efficient Optimizers for Neural Networks"
