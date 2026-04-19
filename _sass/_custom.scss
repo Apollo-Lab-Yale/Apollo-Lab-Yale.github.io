@@ -227,11 +227,18 @@ h1, h2, h3, h4, h5, h6 {
   height: 280px !important;
   min-height: 280px !important;
   padding: 4rem 0 !important;
-  background-attachment: fixed !important;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .header.home-header {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
 }
 
 /* Instant Elite Tooltips */
