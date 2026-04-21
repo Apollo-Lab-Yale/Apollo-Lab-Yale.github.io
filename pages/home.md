@@ -7,31 +7,147 @@ permalink: /
 ---
 
 
-<div class="card header bg-no-image shadow-sm border-0 mt-5 mb-5" style="border-radius: 24px; overflow: hidden; height: auto; min-height: unset; padding: 0 !important;">
-  <div class="card-body p-4 p-md-5" style="position: relative; z-index: 5;">
-    <div class="row align-items-center">
-      <div class="col-md-1 d-none d-md-flex justify-content-center">
-        <!-- Modern Glass Accent Bar -->
-        <div style="width: 6px; height: 140px; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(4px); border-radius: 10px; box-shadow: 0 0 15px rgba(255,255,255,0.2);"></div>
-      </div>
-      <div class="col-md-11">
-        <h2 class="font-weight-bold mb-4" style="color: #ffffff; letter-spacing: -0.02em; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-          Welcome to the Applied Planning, Learning, and Optimization (<span style="color: #ffffff; font-weight: 900;">APOLLO</span>) Lab at Yale
-        </h2>
-        
-        <!-- Glassmorphic Text Container for readability -->
-        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1);">
-          <p style="font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
-            Our lab is driven by the goal of enabling <strong>robots and learning systems to act and improve in real-time</strong>, directly within the dynamic, uncertain environments of the real world. We develop algorithms for fast optimization, planning, and control that allow systems to continuously update their behavior as they operate, tightly integrating perception, action, and learning so that robots can react quickly, gather the right information, and adapt their strategies on the fly.
-          </p>
-          <p style="font-size: 1.15rem; line-height: 1.7; color: rgba(255, 255, 255, 0.9); margin-bottom: 0;">
-            Our work spans learning, geometry, and applied math, and is motivated by domains where real-time adaptability has meaningful societal impact: <strong>home and assistive robotics</strong>, where systems must operate safely alongside people; <strong>healthcare and robotic surgery</strong>, where precision and real-time feedback are essential; and <strong>disaster response</strong>, where robots must act under uncertainty with limited prior information.
-          </p>
-        </div>
-      </div>
-    </div>
+<!-- Editorial Hero Welcome — elegant, no card -->
+<div class="apollo-hero mt-4 mb-5">
+
+  <!-- Hero image -->
+  <div class="apollo-hero-image-wrap">
+    <img src="{{ '/assets/theme/images/homepage-background.png' | relative_url }}" alt="APOLLO Lab" class="apollo-hero-img">
   </div>
+
+  <!-- Top label -->
+  <div class="apollo-hero-label">
+    <span class="apollo-hero-line"></span>
+    Yale University · Computer Science
+    <span class="apollo-hero-line"></span>
+  </div>
+
+  <!-- Main statement -->
+  <h2 class="apollo-hero-headline">
+    Applied Planning, Learning, and Optimization (APOLLO) Lab
+  </h2>
+
+  <!-- Clean prose -->
+  <div class="apollo-hero-prose">
+    <p>
+      We develop algorithms for <strong>fast planning, learning, and optimization</strong> that allow robots and autonomous agents to continuously adapt as they operate, tightly integrating perception, action, and learning so systems can react quickly, gather the right information, and improve in real-time.
+    </p>
+    <p>
+      Our work is applied in <strong>home and assistive robotics</strong>, <strong>healthcare and robotic surgery</strong>, and <strong>disaster response</strong>.
+    </p>
+  </div>
+
 </div>
+
+<style>
+/* ─── Apollo Editorial Hero ─────────────────────────────── */
+.apollo-hero {
+  padding: 0.75rem 0 3rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Hero image */
+.apollo-hero-image-wrap {
+  margin-bottom: 2rem;
+}
+
+.apollo-hero-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+  display: block;
+}
+
+.apollo-hero-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 1.75rem;
+}
+
+.apollo-hero-line {
+  display: inline-block;
+  height: 1px;
+  width: 36px;
+  background: linear-gradient(90deg, transparent, #94a3b8, transparent);
+}
+
+.apollo-hero-headline {
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1.75rem !important;
+  /* Gradient text */
+  background: linear-gradient(120deg, #2563eb 0%, #6366f1 40%, #a855f7 70%, #3b82f6 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Entry + shimmer animation */
+  animation: heroHeadlineIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both,
+             heroShimmer 4s linear 0.7s infinite;
+}
+
+@keyframes heroHeadlineIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    letter-spacing: 0.02em;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: -0.03em;
+  }
+}
+
+@keyframes heroShimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position:   0% center; }
+}
+
+
+
+/* Prose */
+.apollo-hero-prose {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 1rem;
+  border-left: 3px solid #e2e8f0;
+  padding-left: 1.5rem;
+}
+
+.apollo-hero-prose p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 0.9rem;
+}
+
+.apollo-hero-prose p:last-child { margin-bottom: 0; }
+
+.apollo-hero-prose strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .apollo-hero { padding: 1.5rem 0 2rem; }
+  .apollo-hero-prose { border-left: none; padding-left: 0; text-align: center; }
+}
+/* ─────────────────────────────────────────────────────── */
+</style>
 
 <!-- Dynamic Research Media Gallery -->
 <h3 class="mt-5 mb-4 font-weight-bold" style="letter-spacing: -0.02em; padding-bottom: 0.5rem; border-bottom: 2px solid #e2e8f0; color: #1e293b;">
