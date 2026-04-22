@@ -50,7 +50,7 @@
   link: "https://arxiv.org/abs/2512.23103"
   threads: ["Software Tools for Robotics Research"]
 
-- title: "A New Software Tool for Generating and Visualizing Robot Self-Collision Matrices"
+- title: "SelfCollisionGen: A Robust Tool for Generating and Visualizing Robot Self-Collision Matrices"
   authors: "Roshan Klein-Seetharaman, Daniel Rakita"
   type: "Preprint"
   # venue: "ICRA"
