@@ -17,6 +17,16 @@
 #            Use `|` for multi-line text blocks.
 # ==========================================
 
+- date: "2026-04-30"
+  type: "Conference"
+  title: "ICML 2026"
+  # tags: [Data, Shared tag]
+  content: |
+    Our lab has one paper that was accepted to the International Conference on Machine Learning (ICML) 2026 conference!  This paper is:
+    
+    - **Turning Stale Gradients into Stable Gradients: Coherent Coordinate Descent with Implicit Landscape Smoothing for Lightweight Zeroth-Order Optimization** *(authors: Chen Liang, Xiatao Sun, Qian Wang, Daniel Rakita)*
+
+
 - date: "2026-03-15"
   type: "Conference"
   title: "ICRA 2026"
