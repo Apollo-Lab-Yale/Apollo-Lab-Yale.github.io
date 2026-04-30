@@ -19,7 +19,7 @@
 
 - date: "2026-04-30"
   type: "Publication"
-  title: "Papers accepted at ICML 2026"
+  title: "Paper accepted at ICML 2026"
   # tags: [Data, Shared tag]
   content: |
     Our lab has one paper that was accepted to the International Conference on Machine Learning (ICML) 2026 conference!  This paper is:
