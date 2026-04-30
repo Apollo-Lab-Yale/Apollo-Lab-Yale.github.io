@@ -18,8 +18,8 @@
 # ==========================================
 
 - date: "2026-04-30"
-  type: "Conference"
-  title: "ICML 2026"
+  type: "Publication"
+  title: "Papers accepted at ICML 2026"
   # tags: [Data, Shared tag]
   content: |
     Our lab has one paper that was accepted to the International Conference on Machine Learning (ICML) 2026 conference!  This paper is:
@@ -28,8 +28,8 @@
 
 
 - date: "2026-03-15"
-  type: "Conference"
-  title: "ICRA 2026"
+  type: "Publication"
+  title: "Papers accepted at ICRA 2026"
   # tags: [Data, Shared tag]
   content: |
     Our lab has two papers that were accepted to the International Conference on Robotics and Automation (ICRA) 2026 conference!  These papers are:
@@ -50,8 +50,8 @@
     Congratulations to the entire team!
 
 - date: "2025-08-08"
-  type: "Conference"
-  title: "IROS 2025"
+  type: "Publication"
+  title: "Papers accepted at IROS 2025"
   # tags: [Data, Shared tag]
   content: |
     Our lab has two papers that were accepted to the International Conference on Intelligent Robots and Systems (IROS) 2025 conference!  These papers are:
@@ -67,8 +67,8 @@
     Roshan Klein-Seetharaman was awarded a National Science Foundation (NSF) Graduate Research Fellowship Award! Congratulations, Roshan!
 
 - date: "2025-04-11"
-  type: "Conference"
-  title: "RSS 2025"
+  type: "Publication"
+  title: "Papers accepted at RSS 2025"
   # tags: [Data, Shared tag]
   content: |
     Our lab has two papers that were accepted to the Robotics Science and Systems (RSS) 2025 conference!  These papers are:
@@ -76,12 +76,10 @@
     - **Dynamic Rank Adjustment in Diffusion Policies for Efficient and Flexible Training** *(authors: Xiatao Sun, Shuo Yang, Yinxing (Jack) Chen, Franics Fan, Yiyan (Edgar) Liang, Daniel Rakita)*
     
     - **Coherance-based Approximate Derivatives via Web of Affine Spaces Optimization** *(authors: Daniel Rakita, Chen Liang\*, Qian (Peter) Wang\*, where \* means equal contribution)*
-    
-    We will share paper websites, pre-print articles, and videos soon!
 
 - date: "2025-02-15"
   type: "Publication"
-  title: "KSERS 2025"
+  title: "Work accepted at KSERS 2025"
   # tags: [Data, Shared tag]
   content: |
     Our work has been accepted for presentation at the Korean Society of Endo-Laproscopic & Robotic Surgery (KSERS) Symposium in April 2025.  This work was done in collaboration with Yale New Haven Health. 
@@ -92,7 +90,7 @@
 
 - date: "2024-12-03"
   type: "Publication"
-  title: "ASCRS 2025"
+  title: "Work accepted ASCRS 2025"
   # tags: [Data, Shared tag]
   content: |
     Our work has been accepted for presentation at the American Society of Colon and Rectal Surgeons (ASCRS) meeting in San Diego in May 2025.  This work was done in collaboration with Yale New Haven Health. 
@@ -103,7 +101,7 @@
 
 - date: "2024-09-01"
   type: "Publication"
-  title: "IROS 2024"
+  title: "Papers accepted at IROS 2024"
   # tags: [Data, Shared tag]
   content: |
     Our paper Sequential Discrete Action Selectionvia Blocking Conditions and Resolutions (authors Liam Merz Hoffmeister, Brian Scassellati, and Daniel Rakita) will be presented at IROS 2024.
@@ -123,14 +121,14 @@
     Professors Daniel Rakita and Brian Scassellati were awarded a grant for their proposal “Robot Manipulation in Densely Cluttered Environments”. This work will focus on creating a generalizable framework that enables robots to work in cluttered environments, such as for homecare, healthcare, agriculture, or disaster relief scenarios. Areas of investigation will include dynamically adjusting viewpoints to locate occluded objects, computing long action sequences to clear obstacles, and crafting motion strategies that make strategic contacts with surrounding items to gain better access to parts of the workspace. The $1.2M grant is funded by the Office of Naval Research.
 
 - date: "2023-04-24"
-  type: "Publication"
+  type: "Media"
   title: "Yale news article for ICRA 2023 paper"
   # tags: [Data, Shared tag]
   content: |
     [News article](https://seas.yale.edu/news-events/news/grasping-future-robotic-arm-hand-combo) on our paper An Analysis of Unified Manipulation with Robot Arms and Dexterous Hands via Optimization-based Motion Synthesis that will be featured at ICRA 2023 in London.
 
 - date: "2023-03-18"
-  type: "Publication"
+  type: "Award"
   title: "HRI2023 best paper award"
   content: |
     Our paper, Lively: Enabling Multimodal, Lifelike, and Extensible Real-time Robot Motion, won a Best Paper Award at HRI 2023! Check out documentation and code for our proposed method [here](https://wisc-hci.github.io/lively/).
