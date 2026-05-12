@@ -48,6 +48,9 @@
   selected_publications: 
     - "Dynamic Rank Adjustment in Diffusion Policies for Efficient and Flexible Training"
     - "An Analysis of Streaming Deep Reinforcement Learning for Adaptive Continual Learning in Robotics"
+  media:
+    - type: "image"
+      src: "/assets/theme/images/research/streamteaser.gif"
 
 
 - title: "Automatic Mesh Generation for Robotics"
