@@ -128,7 +128,7 @@
   # keywords: "Differentiation, Rust, Robotics"
 
 - title: "ad-trait: A Fast and Flexible Automatic Differentiation Library in Rust"
-  authors: "Chen Liang, Peter Wang, Andy Xu, Daniel Rakita"
+  authors: "Chen Liang, Qian Wang, Andy Xu, Daniel Rakita"
   type: "Conference"
   venue: "IROS"
   year: 2025
