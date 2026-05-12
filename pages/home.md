@@ -155,10 +155,10 @@ permalink: /
 </h3>
 
 <!-- Dynamic Topic Header (Modern & Clean) -->
-<div class="active-topic-meta mt-2 mb-4">
-  <div class="d-flex align-items-center gap-3">
-    <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1" style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; border-radius: 4px;">Active Topic</span>
-    <h4 id="apollo-active-topic-title" class="mb-0" style="font-size: 1.1rem; color: #475569; font-weight: 600; transition: opacity 0.3s ease;">Initializing...</h4>
+<div class="active-topic-meta mt-2 mb-3 mb-md-4">
+  <div class="d-flex align-items-center gap-2 gap-md-3">
+    <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1" style="font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; border-radius: 4px;">Active Topic</span>
+    <h4 id="apollo-active-topic-title" class="mb-0" style="font-size: clamp(0.9rem, 4vw, 1.1rem); color: #475569; font-weight: 600; transition: opacity 0.3s ease;">Initializing...</h4>
   </div>
 </div>
 
@@ -167,9 +167,26 @@ permalink: /
 #home-research-gallery {
   border-radius: 20px;
   overflow: hidden;
-  background-color: #f8fafc; 
+  background-color: #f8fafc; /* Safe light background for transparent images */
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02) !important;
   border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Responsive Heights to eliminate empty vertical space */
+.apollo-gallery-item {
+  height: 550px;
+}
+
+@media (max-width: 992px) {
+  .apollo-gallery-item { height: 420px; }
+}
+
+@media (max-width: 768px) {
+  .apollo-gallery-item { height: 320px; }
+}
+
+@media (max-width: 480px) {
+  .apollo-gallery-item { height: 260px; }
 }
 
 /* Enhanced Controls */
@@ -185,7 +202,7 @@ permalink: /
 }
 
 .apollo-gallery-control-icon {
-  background-color: rgba(15, 23, 42, 0.6) !important;
+  background-color: rgba(15, 23, 42, 0.5) !important; /* High contrast dark icons */
   background-size: 45% 45% !important;
   border-radius: 50% !important;
   width: 44px !important;
@@ -194,13 +211,12 @@ permalink: /
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .apollo-gallery-control:hover .apollo-gallery-control-icon {
   transform: scale(1.1);
-  background-color: rgba(15, 23, 42, 0.85) !important;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  background-color: rgba(15, 23, 42, 0.75) !important;
 }
 
 /* Responsive Scaling for Arrows */
@@ -209,32 +225,32 @@ permalink: /
 }
 
 @media (max-width: 768px) {
-  .apollo-gallery-control { width: 15% !important; }
+  .apollo-gallery-control { width: 14% !important; }
   .apollo-gallery-control-icon { 
-    width: 36px !important; 
-    height: 36px !important; 
+    width: 34px !important; 
+    height: 34px !important; 
   }
 }
 
 /* Indicators Refinement */
 .apollo-gallery-indicators {
-  bottom: 1.25rem !important;
+  bottom: 1rem !important;
   margin-bottom: 0 !important;
 }
 
 .apollo-gallery-indicators button {
-  width: 7px !important;
-  height: 7px !important;
+  width: 6px !important;
+  height: 6px !important;
   border-radius: 50% !important;
   margin: 0 4px !important;
-  background-color: #94a3b8 !important;
+  background-color: #94a3b8 !important; /* Darker dots for light bg */
   border: none !important;
   opacity: 0.3 !important;
   transition: all 0.3s ease;
 }
 
 .apollo-gallery-indicators button.active {
-  width: 20px !important;
+  width: 18px !important;
   border-radius: 4px !important;
   background-color: #3b82f6 !important;
   opacity: 1 !important;
@@ -262,7 +278,7 @@ permalink: /
     {% for thread in site.data.research %}
       {% if thread.media %}
         {% for m in thread.media %}
-          <div class="carousel-item {% if active_set == false %}active{% assign active_set = true %}{% endif %}" style="height: 550px;" data-topic-title="{{ thread.title }}">
+          <div class="carousel-item apollo-gallery-item {% if active_set == false %}active{% assign active_set = true %}{% endif %}" data-topic-title="{{ thread.title }}">
             {% if m.type == 'video' %}
             <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;">
               <source src="{{ m.src | relative_url }}" type="video/mp4">
