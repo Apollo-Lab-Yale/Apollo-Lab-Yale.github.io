@@ -114,6 +114,8 @@
   year: 2026
   link: "https://arxiv.org/abs/2512.24428"
   threads: ["Automatic Mesh Generation for Robotics"]
+  website: "https://apollo-lab-yale.github.io/26-ICRA-subsecond-mesh-gen-website/"
+  video: "https://www.youtube.com/embed/VGAVI3IHXwY?si=a56tfYOTdtBh0ZFJ"
   # keywords: "Differentiation, Rust, Robotics"
 
 - title: "An Analysis of Streaming Deep Reinforcement Learning for Adaptive Continual Learning in Robotics"
@@ -135,6 +137,7 @@
   keywords: "Differentiation, Rust, Robotics"
   crates: "https://crates.io/crates/ad-trait"
   code: "https://github.com/djrakita/ad_trait"
+  video: "https://www.youtube.com/embed/bvBBWe_MmGQ?si=2oquCmGpQS0QkxUt"
 
 - title: "Towards Zero-Knowledge Task Planning via a Language-based Approach"
   authors: "Liam Merz Hoffmeister, Brian Scassellati, Daniel Rakita"
@@ -164,7 +167,7 @@
   threads: ["Combining Visual + Manipulation Learning"]
   # video: "https://www.youtube.com/embed/BrVUlQ4Tixw?si=KtYwQ9QiZSsLy0Bl"
 
-- title: "Sequential Discrete Action Selectionvia Blocking Conditions and Resolutions"
+- title: "Sequential Discrete Action Selection via Blocking Conditions and Resolutions"
   authors: "Liam Merz Hoffmeister, Brian Scassellati, Daniel Rakita"
   type: "Conference"
   venue: "IROS"

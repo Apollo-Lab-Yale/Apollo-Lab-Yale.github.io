@@ -150,13 +150,101 @@ permalink: /
 </style>
 
 <!-- Dynamic Research Media Gallery -->
-<h3 class="mt-5 mb-4 font-weight-bold" style="letter-spacing: -0.02em; padding-bottom: 0.5rem; border-bottom: 2px solid #e2e8f0; color: #1e293b;">
+<h3 class="mt-5 mb-0 font-weight-bold" style="letter-spacing: -0.02em; color: #1e293b;">
   <i class="fas fa-flask text-primary me-2" style="font-size: 0.85em;"></i> Research Topics
 </h3>
 
-<div id="home-research-gallery" class="carousel slide shadow border-0 mb-5 pb-0" data-bs-ride="carousel" data-bs-pause="false" style="border-radius: 16px; overflow: hidden; background-color: #ffffff;">
+<!-- Dynamic Topic Header (Modern & Clean) -->
+<div class="active-topic-meta mt-2 mb-4">
+  <div class="d-flex align-items-center gap-3">
+    <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1" style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; border-radius: 4px;">Active Topic</span>
+    <h4 id="apollo-active-topic-title" class="mb-0" style="font-size: 1.1rem; color: #475569; font-weight: 600; transition: opacity 0.3s ease;">Initializing...</h4>
+  </div>
+</div>
+
+<style>
+/* ─── Apollo Research Gallery Enhancements ──────────────── */
+#home-research-gallery {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f8fafc; 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02) !important;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Enhanced Controls */
+.apollo-gallery-control {
+  width: 8% !important;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.apollo-gallery-control:hover {
+  opacity: 1;
+  width: 9% !important;
+}
+
+.apollo-gallery-control-icon {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  background-size: 45% 45% !important;
+  border-radius: 50% !important;
+  width: 44px !important;
+  height: 44px !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.apollo-gallery-control:hover .apollo-gallery-control-icon {
+  transform: scale(1.1);
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Responsive Scaling for Arrows */
+@media (max-width: 992px) {
+  .apollo-gallery-control { width: 12% !important; }
+}
+
+@media (max-width: 768px) {
+  .apollo-gallery-control { width: 15% !important; }
+  .apollo-gallery-control-icon { 
+    width: 36px !important; 
+    height: 36px !important; 
+  }
+}
+
+/* Indicators Refinement */
+.apollo-gallery-indicators {
+  bottom: 1.25rem !important;
+  margin-bottom: 0 !important;
+}
+
+.apollo-gallery-indicators button {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  margin: 0 4px !important;
+  background-color: #94a3b8 !important;
+  border: none !important;
+  opacity: 0.3 !important;
+  transition: all 0.3s ease;
+}
+
+.apollo-gallery-indicators button.active {
+  width: 20px !important;
+  border-radius: 4px !important;
+  background-color: #3b82f6 !important;
+  opacity: 1 !important;
+}
+/* ────────────────────────────────────────────────────────── */
+</style>
+
+<div id="home-research-gallery" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
   <!-- Indicators -->
-  <div class="carousel-indicators mb-2">
+  <div class="carousel-indicators apollo-gallery-indicators">
     {% assign idx = 0 %}
     {% for thread in site.data.research %}
       {% if thread.media %}
@@ -174,7 +262,7 @@ permalink: /
     {% for thread in site.data.research %}
       {% if thread.media %}
         {% for m in thread.media %}
-          <div class="carousel-item {% if active_set == false %}active{% assign active_set = true %}{% endif %}" style="height: 550px;">
+          <div class="carousel-item {% if active_set == false %}active{% assign active_set = true %}{% endif %}" style="height: 550px;" data-topic-title="{{ thread.title }}">
             {% if m.type == 'video' %}
             <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;">
               <source src="{{ m.src | relative_url }}" type="video/mp4">
@@ -182,23 +270,18 @@ permalink: /
             {% else %}
             <img src="{{ m.src | relative_url }}" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;" alt="{{ thread.title }}">
             {% endif %}
-            
-            <!-- Thread Title Caption -->
-            <div class="carousel-caption d-none d-md-block" style="background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, transparent 100%); bottom: 0; left: 0; right: 0; padding-bottom: 2.5rem; padding-top: 3rem;">
-              <h5 class="mb-0 font-weight-bold" style="letter-spacing: 0.02em; color: #3b82f6 !important; text-shadow: 0 1px 2px rgba(255,255,255,0.8);">{{ thread.title }}</h5>
-            </div>
           </div>
         {% endfor %}
       {% endif %}
     {% endfor %}
   </div>
   
-  <button class="carousel-control-prev" type="button" data-bs-target="#home-research-gallery" data-bs-slide="prev" style="background: none; width: 8%; border: none;">
-    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); opacity: 1 !important;"></span>
+  <button class="carousel-control-prev apollo-gallery-control" type="button" data-bs-target="#home-research-gallery" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon apollo-gallery-control-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#home-research-gallery" data-bs-slide="next" style="background: none; width: 8%; border: none;">
-    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); opacity: 1 !important;"></span>
+  <button class="carousel-control-next apollo-gallery-control" type="button" data-bs-target="#home-research-gallery" data-bs-slide="next">
+    <span class="carousel-control-next-icon apollo-gallery-control-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
@@ -216,7 +299,7 @@ permalink: /
   </video>
 </div>
 
-# <iframe src="https://apollo-lab-yale.github.io/apollo-resources/" width="100%" height="500"></iframe>
+<!-- <iframe src="https://apollo-lab-yale.github.io/apollo-resources/" width="100%" height="500"></iframe> -->
 
 <script>
 /**
@@ -232,22 +315,40 @@ permalink: /
     }
   }
 
+  function updateActiveTitle($carousel) {
+    const $activeItem = $carousel.find('.carousel-item.active');
+    const title = $activeItem.data('topic-title');
+    const $titleEl = $('#apollo-active-topic-title');
+    
+    // Smooth transition
+    $titleEl.css('opacity', '0');
+    setTimeout(() => {
+      $titleEl.text(title);
+      $titleEl.css('opacity', '1');
+    }, 150);
+  }
+
   function initializeIroncladWatchdog() {
+    const $carousel = $('#home-research-gallery');
     const $videos = $('video[loop]');
     
-    // 1. Carousel Lifecycle Sync
-    $('.carousel').on('slid.bs.carousel', function() {
+    // 1. Carousel Lifecycle Sync (Video + Title)
+    $carousel.on('slid.bs.carousel', function() {
       $(this).find('.carousel-item.active video').each(function() { forcePlay(this); });
+      updateActiveTitle($(this));
     });
 
-    // 2. Interaction Unlocker
+    // 2. Initial Title Set
+    updateActiveTitle($carousel);
+
+    // 3. Interaction Unlocker
     const unlocker = function() {
       $videos.each(function() { forcePlay(this); });
       $('body').off('click touchstart scroll', unlocker);
     };
     $('body').on('click touchstart scroll', unlocker);
 
-    // 3. Persistence Heartbeat (Checks every 2s for browser-side pauses)
+    // 4. Persistence Heartbeat (Checks every 2s for browser-side pauses)
     setInterval(function() {
       $videos.each(function() {
         if (this.paused && !this.seeking) {
