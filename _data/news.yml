@@ -17,6 +17,14 @@
 #            Use `|` for multi-line text blocks.
 # ==========================================
 
+- date: "2026-06-01"
+  type: "Conference"
+  title: "APOLLO Lab at ICRA 2026 - Oral Presentation"
+  content: |
+    Our paper, **Hybrid Diffusion Policies with Projective Geometric Algebra for Efficient Robot Manipulation Learning** *(authors: Xiatao Sun, Yuxuan Wang, Shuo Yang, Yinxing Chen, Daniel Rakita)* will be presented as an Oral presentation at ICRA 2026.
+    
+    Additionally, our paper **Subsecond 3D Mesh Generation for Robot Manipulation** *(authors: Qian Wang, Omar Abdellall, Tony Gao, Xiatao Sun, Daniel Rakita)* will be in the proceedings as well, presented as an interactive poster.
+
 - date: "2026-04-30"
   type: "Publication"
   title: "Paper accepted at ICML 2026"
