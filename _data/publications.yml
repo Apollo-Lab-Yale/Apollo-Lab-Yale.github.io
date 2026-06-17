@@ -93,8 +93,8 @@
 
 - title: "Robust and Efficient MuJoCo-based Model Predictive Control via Web of Affine Spaces Derivatives"
   authors: "Chen Liang, Daniel Rakita"
-  type: "Preprint"
-  # venue: "ICRA"
+  type: "Conference"
+  venue: "IROS"
   year: 2026
   link: "https://arxiv.org/abs/2512.21109"
   threads: ["Computational Differentiation and Vector Recovery", "Motion Generation Algorithms"]

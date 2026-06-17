@@ -17,6 +17,12 @@
 #            Use `|` for multi-line text blocks.
 # ==========================================
 
+- date: "2026-06-17"
+  type: "Publication"
+  title: "Paper accepted at IROS 2026"
+  content: |
+    Our paper, **Robust and Efficient MuJoCo-based Model Predictive Control via Web of Affine Spaces Derivatives** *(authors: Chen Liang, Daniel Rakita)* has been accepted to the International Conference on Intelligent Robots and Systems (IROS) 2026!
+
 - date: "2026-06-01"
   type: "Conference"
   title: "APOLLO Lab at ICRA 2026 - Oral Presentation"
