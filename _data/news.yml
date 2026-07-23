@@ -13,9 +13,31 @@
 #   tags:   (Optional) Array of keywords used for the 'Keyword Filtering' 
 #           dropdown on the site.
 #           Example: tags: [Robotics, Award]
+#   media:  (Optional) Photos/videos/gifs to display in an interactive gallery.
+#           Can be a list of paths or objects with src/type/caption.
+#           Example:
+#           media:
+#             - "assets/theme/images/good1.JPG"
+#             - "assets/theme/images/good2.JPG"
+#             - "assets/theme/images/good3.JPG"
 #   content: (Required) The body text. Supports Markdown and Liquid.
 #            Use `|` for multi-line text blocks.
 # ==========================================
+
+- date: "2026-07-08"
+  type: "Outreach"
+  title: "APOLLO Lab Hosts Robotics & AI Workshops for Yale Pathways to Science"
+  tags: [Outreach, Robotics, AI]
+  media:
+    - "assets/theme/images/good1.JPG"
+    - "assets/theme/images/good2.JPG"
+    - "assets/theme/images/good3.JPG"
+  content: |
+    In early July, APOLLO Lab PhD student TJ Vitchutripop led multiple workshop sessions on robotics and AI for the **Yale Pathways to Science** program. 
+    
+    Yale Pathways to Science is an outreach program designed for local high school students in the greater New Haven area to attend STEM-themed events and programming organized by the Yale community. 
+
+    During our workshop, students were introduced to the critical problems that roboticists encounter day-to-day and the role deep learning techniques can play in tackling some of these issues. Students had the opportunity to participate in interactive activities, gain exposure to foundational mathematical structures, and see live robot demonstrations (dancing robot dogs included)!
 
 - date: "2026-06-17"
   type: "Publication"

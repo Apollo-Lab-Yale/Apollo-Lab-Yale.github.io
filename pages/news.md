@@ -82,6 +82,9 @@ permalink: /news/
       {% assign display_type = "Presentation" %}
     {% elsif entry_type == "media" or entry_type == "press" %}
       {% assign icon = "fas fa-bullhorn" %}
+    {% elsif entry_type == "outreach" or entry_type == "workshop" or lower_title contains 'outreach' or lower_title contains 'workshop' or lower_title contains 'pathways' %}
+      {% assign icon = "fas fa-graduation-cap" %}
+      {% assign display_type = "Outreach" %}
     {% endif %}
 
     <!-- Extract Word Count for Smart Collapse Logic -->
@@ -116,6 +119,7 @@ permalink: /news/
           
           <!-- Content hidden by default behind the toggle button -->
           <div id="full-{{ forloop.index }}" class="d-none mt-2">
+            {% include news_media_gallery.html forloop_index=forloop.index post_id_prefix="news-pg" %}
             {{ post.content | markdownify | replace: '<img', '<img class="img-fluid rounded shadow-sm my-3" style="max-height:400px; display:block;"' }}
           </div>
           
@@ -148,6 +152,7 @@ function toggleNews(id) {
     full.classList.remove('d-none');
     btn.innerHTML = 'Close Story <i class="fas fa-chevron-up ms-1"></i>';
     btn.classList.replace('btn-outline-primary', 'btn-light');
+    window.dispatchEvent(new Event('resize'));
   } else {
     // Hide Full
     full.classList.add('d-none');
