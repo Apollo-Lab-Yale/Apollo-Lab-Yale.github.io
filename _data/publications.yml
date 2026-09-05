@@ -26,6 +26,18 @@
 #           icon: "fas fa-database" # FontAwesome class
 # ==========================================
 
+- title: "Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models"
+  authors: "Xiatao Sun, Yuan Zhuang, Mateo Sanchez Lopez Negrete, Matei-Victor Coldea, Chen Liang, Haoyang Zhang, Che Liu, Ziyao Zeng, Shawn Li, Qian Wang, Fei Miao, Daniel Rakita"
+  type: "Conference"
+  venue: "CoRL"
+  year: 2026
+
+- title: "Efficient On-policy Visual-RL via Stochastic Decoupled Policy Gradient"
+  authors: "Haoxiang You, Yilang Liu, Davis Zong, Qian Wang, Teeratham Vitchutripop, Qi Wang, Daniel Rakita, Ian Abraham"
+  type: "Conference"
+  venue: "CoRL"
+  year: 2026
+
 - title: "AI-Powered Semantic Segmentation Model for Enhanced Ureteral Mapping and Real-Time Instrument Feedback in Robotic Colorectal Surgery"
   authors: "Justin M. Bader, Xiatao Sun, Tripp Rosenfelt, Alexis Ramirez-Hardy, Netanel Sapir, Rachel Scheub, Teeratham Vitchutripop, Amit Khanna, Haddon Pantel, Daniel Rakita"
   type: "Journal"
