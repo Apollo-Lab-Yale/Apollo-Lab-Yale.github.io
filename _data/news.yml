@@ -101,6 +101,12 @@
     
     Congratulations to the entire team!
 
+- date: "2025-10-01"
+  type: "Grant"
+  title: "ONR STTR Phase 1 funding for robotic engine maintenance"
+  content: |
+    Daniel Rakita and Brian Scassellati (Yale) are participating as key investigators in **Advanced AI-Based Manipulation for USV Diesel Engine Maintenance**, supported by Office of Naval Research **STTR Phase 1** funding for 2025–2026. The collaboration includes Brian Kononchik (Boston Engineering) and John Steagall (Fairbanks Morse Defense). The funding amount listed is **$160,000**.
+
 - date: "2025-08-08"
   type: "Publication"
   title: "Papers accepted at IROS 2025"
@@ -167,7 +173,7 @@
 
 - date: "2024-02-01"
   type: "Grant"
-  title: "ONR grant"
+  title: "ONR funding for robot manipulation in densely cluttered environments"
   # tags: [Data, Shared tag]
   content: |
     Professors Daniel Rakita and Brian Scassellati were awarded a grant for their proposal “Robot Manipulation in Densely Cluttered Environments”. This work will focus on creating a generalizable framework that enables robots to work in cluttered environments, such as for homecare, healthcare, agriculture, or disaster relief scenarios. Areas of investigation will include dynamically adjusting viewpoints to locate occluded objects, computing long action sequences to clear obstacles, and crafting motion strategies that make strategic contacts with surrounding items to gain better access to parts of the workspace. The $1.2M grant is funded by the Office of Naval Research.
