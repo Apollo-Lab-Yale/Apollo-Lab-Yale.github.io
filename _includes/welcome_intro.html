@@ -17,7 +17,7 @@
   #apollo-welcome[open] { display: grid; place-items: center; }
   #apollo-welcome::backdrop { background: transparent; }
   #apollo-welcome.is-leaving { opacity: 0; pointer-events: none; }
-  #apollo-welcome video { display: block; width: min(92vw, 1200px); max-height: 75vh; object-fit: contain; }
+  #apollo-welcome video { display: block; width: min(92vw, 1200px); max-height: 75vh; object-fit: contain; background: #fff; }
   #apollo-welcome button {
     position: absolute;
     bottom: max(2rem, env(safe-area-inset-bottom));
@@ -53,7 +53,7 @@
     seen = sessionStorage.getItem(key) === '1';
     sessionStorage.setItem(key, '1');
   } catch (_) { seen = true; }
-  if (seen || motion.matches || !dialog.showModal || !video.canPlayType('video/webm; codecs="vp9"')) {
+  if (seen || motion.matches || !dialog.showModal || !video.canPlayType('video/mp4; codecs="avc1.64002a"')) {
     dialog.remove();
     return;
   }
@@ -91,7 +91,8 @@
     dialog.showModal();
     document.documentElement.classList.add('apollo-welcome-open');
     video.muted = true;
-    video.src = {{ '/assets/theme/videos/apollo-welcome.webm' | relative_url | jsonify }};
+    // White is composited into the MP4 so mobile playback does not depend on alpha support.
+    video.src = {{ '/assets/theme/videos/apollo-welcome-white.mp4' | relative_url | jsonify }};
     // A slow connection or stalled decoder must never trap visitors here.
     startupTimer = setTimeout(function () { finish(true); }, 1800);
     safetyTimer = setTimeout(function () { finish(false); }, 6500);
