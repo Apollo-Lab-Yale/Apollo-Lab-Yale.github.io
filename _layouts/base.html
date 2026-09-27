@@ -4,6 +4,7 @@
   {% include head.html %}
 
   <body>
+    {% if site.welcome_intro %}{% include welcome_intro.html %}{% endif %}
     {% include navbar.html %}
 
     <main>

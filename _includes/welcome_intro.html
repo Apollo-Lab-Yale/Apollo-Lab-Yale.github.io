@@ -1,0 +1,101 @@
+<style>
+  #apollo-welcome {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    opacity: 1;
+    transition: opacity 350ms ease;
+  }
+  #apollo-welcome:not([open]) { display: none; }
+  #apollo-welcome[open] { display: grid; place-items: center; }
+  #apollo-welcome::backdrop { background: transparent; }
+  #apollo-welcome.is-leaving { opacity: 0; pointer-events: none; }
+  #apollo-welcome video { display: block; width: min(92vw, 1200px); max-height: 75vh; object-fit: contain; }
+  #apollo-welcome button {
+    position: absolute;
+    bottom: max(2rem, env(safe-area-inset-bottom));
+    right: max(2rem, env(safe-area-inset-right));
+    padding: 0.65rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    background: #fff;
+    color: #475569;
+    font: 500 0.9rem Inter, system-ui, sans-serif;
+    cursor: pointer;
+  }
+  #apollo-welcome button:hover { background: #f8fafc; }
+  #apollo-welcome button:focus-visible { outline: 3px solid #3b82f6; outline-offset: 4px; }
+  html.apollo-welcome-open { overflow: hidden; }
+  @media (prefers-reduced-motion: reduce) { #apollo-welcome { transition: none; } }
+</style>
+<dialog id="apollo-welcome" aria-label="Welcome to APOLLO Lab">
+  <video muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+  <button type="button" autofocus>Skip intro <span aria-hidden="true">&rarr;</span></button>
+</dialog>
+<script>
+(function () {
+  'use strict';
+  const dialog = document.getElementById('apollo-welcome');
+  const video = dialog.querySelector('video');
+  const skip = dialog.querySelector('button');
+  const key = 'apollo-welcome-seen';
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let seen = true;
+  // If storage is unavailable, skip rather than replay on every page.
+  try {
+    seen = sessionStorage.getItem(key) === '1';
+    sessionStorage.setItem(key, '1');
+  } catch (_) { seen = true; }
+  if (seen || motion.matches || !dialog.showModal || !video.canPlayType('video/webm; codecs="vp9"')) {
+    dialog.remove();
+    return;
+  }
+
+  let leaving = false;
+  let startupTimer;
+  let safetyTimer;
+  function finish(immediate) {
+    if (leaving) return;
+    leaving = true;
+    clearTimeout(startupTimer);
+    clearTimeout(safetyTimer);
+    video.pause();
+    dialog.classList.add('is-leaving');
+    function close() {
+      dialog.close();
+      dialog.remove();
+      document.documentElement.classList.remove('apollo-welcome-open');
+      // Keep keyboard users in the normal navigation flow after dismissing.
+      const homeLink = document.querySelector('.navbar-brand');
+      if (homeLink) homeLink.focus({ preventScroll: true });
+    }
+    if (immediate || motion.matches) close();
+    else setTimeout(close, 350);
+  }
+  skip.addEventListener('click', function () { finish(false); });
+  dialog.addEventListener('cancel', function (event) { event.preventDefault(); finish(false); });
+  video.addEventListener('ended', function () { finish(false); });
+  video.addEventListener('error', function () { finish(true); });
+  video.addEventListener('playing', function () { clearTimeout(startupTimer); }, { once: true });
+  window.addEventListener('pagehide', function () { finish(true); }, { once: true });
+  motion.addEventListener('change', function (event) { if (event.matches) finish(true); });
+
+  try {
+    dialog.showModal();
+    document.documentElement.classList.add('apollo-welcome-open');
+    video.muted = true;
+    video.src = {{ '/assets/theme/videos/apollo-welcome.webm' | relative_url | jsonify }};
+    // A slow connection or stalled decoder must never trap visitors here.
+    startupTimer = setTimeout(function () { finish(true); }, 1800);
+    safetyTimer = setTimeout(function () { finish(false); }, 6500);
+    video.play().catch(function () { finish(true); });
+  } catch (_) { finish(true); }
+})();
+</script>
