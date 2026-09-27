@@ -5,17 +5,22 @@
   {% assign ignore_image = true %}
 {% endif %}
 
+{% assign refined_header = false %}
+{% if site.refined_section_headers and page.collection != 'posts' %}
+  {% unless background %}{% assign refined_header = true %}{% endunless %}
+{% endif %}
+
 {% if background and ignore_image == false %}
   <header class="header bg-image{% if page.layout == 'home' %} home-header{% endif %}" style="background-image: url('{{ background | relative_url }}')">
 {% else %}
-  <header class="header bg-no-image">
+  <header class="header bg-no-image{% if refined_header %} header--refined{% endif %}">
 {% endif %}
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 position-relative mx-auto">
           {% if page.layout != 'home' %}
-            <div class="header-glass-card shadow-lg animate__animated animate__fadeInUp">
-              <div class="header-accent-label">Section Overview</div>
+            <div class="{% if refined_header %}section-header-content{% else %}header-glass-card shadow-lg animate__animated animate__fadeInUp{% endif %}">
+              {% unless refined_header %}<div class="header-accent-label">Section Overview</div>{% endunless %}
               <h1{% if page.layout == 'home' %} class="home"{% endif %}>{{ page.title }}</h1>
               
               {% if page.description %}

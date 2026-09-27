@@ -3,6 +3,13 @@
  * Transforms standard Bootstrap into a premium, modern, glassmorphic layout.
  */
 
+:root {
+  --apollo-primary: #{$apollo-primary};
+  --apollo-primary-rgb: #{red($apollo-primary)}, #{green($apollo-primary)}, #{blue($apollo-primary)};
+  --apollo-primary-hover: #2563eb;
+  --apollo-blue-light: #60a5fa;
+}
+
 /* Typography & Backgrounds */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
@@ -304,5 +311,58 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .header.bg-no-image {
     padding: 0.75rem 2rem !important; /* Very Short */
+  }
+}
+
+// Optional section-header design. Disable via refined_section_headers in _config.yml.
+.header.bg-no-image.header--refined {
+  padding: 3rem 0 !important;
+  text-align: left;
+  background: radial-gradient(ellipse at 90% 0%, rgba(34, 211, 238, 0.12), transparent 65%),
+              linear-gradient(115deg, #2563eb 0%, #3478e8 60%, #3b82f6 100%) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+
+  // Suppress the legacy mesh animation and noise only for this design.
+  &::before, &::after { content: none; animation: none; }
+
+  .section-header-content {
+    position: relative;
+    padding: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      margin-bottom: 1.25rem;
+      border-radius: 2px;
+      background: #67d7f0;
+    }
+
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-weight: 700 !important;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      overflow-wrap: break-word;
+    }
+
+    .lead {
+      max-width: 42rem;
+      margin: 1rem 0 0;
+      color: #e2eaf6;
+      font-size: 1.1rem;
+      line-height: 1.65;
+
+      p:last-child { margin-bottom: 0; }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 2rem 0 !important;
+    margin-bottom: 2rem !important;
   }
 }

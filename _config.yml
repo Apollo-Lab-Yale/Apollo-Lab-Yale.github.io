@@ -16,6 +16,7 @@ social:
 
 # THEME SETTINGS (ALL OPTIONAL)
 welcome_intro: true                     # Set false to disable the once-per-session welcome video
+refined_section_headers: true           # Set false to restore the original glass-card section headers
 posts_on_home: 4                        # Show x number of latest posts on homepage, can be 0
 tweets_on_home: false                    # Show Twitter feed of social.twitter on homepage
 #archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
@@ -23,7 +24,7 @@ tweets_on_home: false                    # Show Twitter feed of social.twitter o
 
 colors:
   links: "#3b82f6"                      # Vibrant Apollo Blue
-  banner: "#3b82f6"                     # Vibrant Apollo Blue 
+  banner: "#3b82f6"                     # Vibrant Apollo Blue
   footer: "#1e293b"                     # Deep Slate for footer contrast
 font_serif: false                        # Font type for page content: serif (default) or slightly smaller sans-serif
 rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons

@@ -4,7 +4,16 @@
   {% include head.html %}
 
   <body>
-    {% if site.welcome_intro %}{% include welcome_intro.html %}{% endif %}
+    {% if site.welcome_intro %}
+      {% if page.url == '/' %}
+        {% include welcome_intro.html %}
+      {% else %}
+        <script>
+          // Entering through an inner page counts as a visit; do not interrupt a later trip Home.
+          try { sessionStorage.setItem('apollo-welcome-seen', '1'); } catch (_) {}
+        </script>
+      {% endif %}
+    {% endif %}
     {% include navbar.html %}
 
     <main>

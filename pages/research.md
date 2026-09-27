@@ -9,15 +9,15 @@ permalink: /research/
 
 {% for thread in site.data.research %}
 {% assign thread_idx = forloop.index %}
-<div id="{{ thread.title | slugify }}" class="card border-0 mb-5" style="scroll-margin-top: 100px; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border-left: 5px solid #3b82f6 !important; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
+<div id="{{ thread.title | slugify }}" class="card border-0 mb-5" style="scroll-margin-top: 100px; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border-left: 5px solid var(--apollo-primary) !important; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
   <div class="card-body p-4 p-lg-5">
     
     <!-- Thread Title -->
-    <h2 class="font-weight-bold mb-4" style="color: #1e293b; letter-spacing: -0.02em; border-bottom: 4px solid #3b82f6; padding-bottom: 0.75rem; display: inline-flex; align-items: center; gap: 15px;">
-      <i class="{{ thread.icon }}" style="color: #3b82f6; font-size: 0.9em;"></i>
+    <h2 class="font-weight-bold mb-4" style="color: #1e293b; letter-spacing: -0.02em; border-bottom: 4px solid var(--apollo-primary); padding-bottom: 0.75rem; display: inline-flex; align-items: center; gap: 15px;">
+      <i class="{{ thread.icon }}" style="color: var(--apollo-primary); font-size: 0.9em;"></i>
       {{ thread.title }}
       <a href="#{{ thread.title | slugify }}" class="ms-2" style="font-size: 0.6em; vertical-align: middle; color: #94a3b8; transition: color 0.2s ease; text-decoration: none;" 
-            onmouseover="this.style.color='#3b82f6'" 
+            onmouseover="this.style.color='var(--apollo-primary)'"
             onmouseout="this.style.color='#94a3b8'" 
             title="Link to this thread">
         <i class="fas fa-link"></i>
@@ -114,7 +114,7 @@ permalink: /research/
             {% for pub in related_pubs %}
             {% assign pub_slug = pub.title | slugify %}
             <li class="mb-2">
-              <a href="{{ '/publications/#' | append: pub_slug | relative_url }}" class="text-decoration-none" style="color: #3b82f6; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#2563eb';" onmouseout="this.style.color='#3b82f6';">
+              <a href="{{ '/publications/#' | append: pub_slug | relative_url }}" class="text-decoration-none" style="color: var(--apollo-primary); font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--apollo-primary-hover)';" onmouseout="this.style.color='var(--apollo-primary)';">
                 <i class="fas fa-file-alt me-2 text-muted" style="font-size: 0.9em;"></i> {{ pub.title }}
               </a>
             </li>

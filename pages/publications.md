@@ -20,7 +20,7 @@ permalink: /publications/
 {% assign all_threads = site.data.research | map: "title" | sort %}
 
 <!-- Filter Control Panel -->
-<div class="card mb-5 mt-4 shadow-sm" style="border-radius: 12px; background-color: #f8f9fa; border-top: 4px solid #3b82f6 !important;">
+<div class="card mb-5 mt-4 shadow-sm" style="border-radius: 12px; background-color: #f8f9fa; border-top: 4px solid var(--apollo-primary) !important;">
   <div class="card-body p-4">
     
     <!-- Top Row: Structured Dropdowns -->
@@ -102,7 +102,7 @@ permalink: /publications/
        data-threads="{% if publication.threads %}{{ publication.threads | join: '|' | downcase | escape }}{% endif %}"
        data-authors="{{ publication.authors | escape }}"
        data-keywords="{{ publication.keywords | escape }}"
-       style="scroll-margin-top: 100px; border-radius: 12px; overflow: hidden; border-left: 5px solid #3b82f6 !important;">
+       style="scroll-margin-top: 100px; border-radius: 12px; overflow: hidden; border-left: 5px solid var(--apollo-primary) !important;">
        
     <div class="card-body p-4">
       <div class="row align-items-center">

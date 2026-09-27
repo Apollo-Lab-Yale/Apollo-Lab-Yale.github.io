@@ -252,7 +252,7 @@ permalink: /
 .apollo-gallery-indicators button.active {
   width: 18px !important;
   border-radius: 4px !important;
-  background-color: #3b82f6 !important;
+  background-color: var(--apollo-primary) !important;
   opacity: 1 !important;
 }
 /* ────────────────────────────────────────────────────────── */

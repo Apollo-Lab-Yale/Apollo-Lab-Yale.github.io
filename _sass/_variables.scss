@@ -5,7 +5,7 @@
 // or variables (indicated with !default) that are referred by other variables.
 
 // Color system
-$apollo-primary: #3b82f6;
+$apollo-primary: $custom_link_color;
 $apollo-dark: #1e293b;
 
 $primary: $apollo-primary;

@@ -21,7 +21,7 @@ permalink: /news/
 {% assign all_types = all_types | uniq | sort %}
 
 <!-- Filter Control Panel -->
-<div class="card mb-5 mt-4 shadow-sm" style="border-radius: 12px; border-top: 4px solid #3b82f6 !important;">
+<div class="card mb-5 mt-4 shadow-sm" style="border-radius: 12px; border-top: 4px solid var(--apollo-primary) !important;">
   <div class="card-body p-4 bg-light" style="border-radius: 12px;">
     <div class="row">
       <!-- Year -->
@@ -95,11 +95,11 @@ permalink: /news/
          data-type="{{ entry_type | downcase }}" 
          data-tags="{{ post.tags | join: ',' | downcase | escape }}"
          data-text="{{ post.title | append: ' ' | append: post.content | strip_html | downcase | escape }}"
-         style="border-left: 5px solid #3b82f6 !important; border-radius: 12px !important; transition: transform 0.2s;">
+         style="border-left: 5px solid var(--apollo-primary) !important; border-radius: 12px !important; transition: transform 0.2s;">
       
       <div class="card-body p-4">
         <div class="d-flex align-items-center mb-3">
-          <div class="icon-circle text-white d-flex justify-content-center align-items-center" style="background-color: #3b82f6; width: 50px; height: 50px; border-radius: 50%; min-width: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+          <div class="icon-circle text-white d-flex justify-content-center align-items-center" style="background-color: var(--apollo-primary); width: 50px; height: 50px; border-radius: 50%; min-width: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
             <i class="{{ icon }} fa-lg"></i>
           </div>
           <div class="ms-3 mb-0 pb-0" style="margin-left: 1rem !important;">
