@@ -1,7 +1,7 @@
 ---
 layout: home
 title: APOLLO Lab
-description: Applied Planning, Learning, and Optimization Lab @ Yale University
+description: APOLLO Lab at Yale develops the computational foundations for robots that adapt while they work.
 background: /assets/theme/images/homepage-background.png
 permalink: /
 ---
@@ -27,13 +27,15 @@ permalink: /
     Applied Planning, Learning, and Optimization (APOLLO) Lab
   </h2>
 
+  <h1 class="apollo-mission-headline">Robots that adapt while they work.</h1>
+
   <!-- Clean prose -->
   <div class="apollo-hero-prose">
     <p>
-      We develop algorithms for <strong>fast planning, learning, and optimization</strong> that allow robots and autonomous agents to continuously adapt as they operate, tightly integrating perception, action, and learning so systems can react quickly, gather the right information, and improve in real-time.
+      We develop the <strong>computational foundations</strong> for robots that can update their understanding, actions, and skills as the world changes. Our research brings together perception, planning, learning, and optimization to make adaptation practical within the time and computation available during operation.
     </p>
     <p>
-      Our work is applied in <strong>home and assistive robotics</strong>, <strong>healthcare and robotic surgery</strong>, and <strong>disaster response</strong>.
+      We pursue this goal through connected work on <strong>understanding a changing world</strong>, <strong>revising actions</strong>, and <strong>learning from experience</strong>.
     </p>
   </div>
 
@@ -149,17 +151,20 @@ permalink: /
 /* ─────────────────────────────────────────────────────── */
 </style>
 
-<!-- Dynamic Research Media Gallery -->
+{% include research_questions.html %}
+
+<!-- Selected projects illustrate the shared research agenda. -->
 <h3 class="mt-5 mb-0 font-weight-bold" style="letter-spacing: -0.02em; color: #1e293b;">
-  <i class="fas fa-flask text-primary me-2" style="font-size: 0.85em;"></i> Research Topics
+  <i class="fas fa-flask text-primary me-2" style="font-size: 0.85em;"></i> Research in action
 </h3>
 
 <!-- Dynamic Topic Header (Modern & Clean) -->
 <div class="active-topic-meta mt-2 mb-3 mb-md-4">
   <div class="d-flex align-items-center gap-2 gap-md-3">
-    <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1" style="font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; border-radius: 4px;">Active Topic</span>
+    <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1" style="font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; border-radius: 4px;">Project</span>
     <h4 id="apollo-active-topic-title" class="mb-0" style="font-size: clamp(0.9rem, 4vw, 1.1rem); color: #475569; font-weight: 600; transition: opacity 0.3s ease;">Initializing...</h4>
   </div>
+  <a id="apollo-active-project-link" class="agenda-overview-link" href="{{ '/research/' | relative_url }}">Explore this work <span aria-hidden="true">&rarr;</span></a>
 </div>
 
 <style>
@@ -278,7 +283,8 @@ permalink: /
     {% for thread in site.data.research %}
       {% if thread.media %}
         {% for m in thread.media %}
-          <div class="carousel-item apollo-gallery-item {% if active_set == false %}active{% assign active_set = true %}{% endif %}" data-topic-title="{{ thread.title }}">
+          {% assign project_slug = thread.title | slugify %}
+          <div class="carousel-item apollo-gallery-item {% if active_set == false %}active{% assign active_set = true %}{% endif %}" data-topic-title="{{ thread.title | escape }}" data-project-url="{{ '/research/#' | append: project_slug | relative_url }}">
             {% if m.type == 'video' %}
             <video autoplay loop muted playsinline webkit-playsinline preload="auto" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;">
               <source src="{{ m.src | relative_url }}" type="video/mp4">
@@ -335,6 +341,7 @@ permalink: /
     const $activeItem = $carousel.find('.carousel-item.active');
     const title = $activeItem.data('topic-title');
     const $titleEl = $('#apollo-active-topic-title');
+    $('#apollo-active-project-link').attr('href', $activeItem.data('project-url'));
     
     // Smooth transition
     $titleEl.css('opacity', '0');

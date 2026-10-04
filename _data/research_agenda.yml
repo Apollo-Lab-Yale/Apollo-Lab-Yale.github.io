@@ -1,0 +1,70 @@
+# The public research narrative. Project titles match research.yml to preserve existing links.
+- id: understand
+  kind: core
+  label: Understand
+  eyebrow: "01 / Understand"
+  title: "Understand a changing world"
+  question: "How can a robot understand an unfamiliar situation quickly enough to act?"
+  description: |
+    Useful perception gives a robot the information it needs for its next decision. We study how to construct geometry from observations, represent spatial relationships efficiently, and actively choose where to look. These capabilities help turn incomplete observations into models that planning and learning algorithms can use.
+  projects:
+    - title: "Automatic Mesh Generation for Robotics"
+      contribution: "Build usable object geometry from observations, reducing the need for models prepared in advance."
+    - title: "Spatial Computing for Embodied Intelligence"
+      contribution: "Give learning systems explicit spatial structure so they can reason about geometry more efficiently."
+    - title: "Combining Visual + Manipulation Learning"
+      contribution: "Learn where to look alongside how to act, gathering information that helps the robot complete its task."
+
+- id: act
+  kind: core
+  label: Act
+  eyebrow: "02 / Act"
+  title: "Revise actions as conditions change"
+  question: "How can a robot adjust its plans and movements as new information arrives?"
+  description: |
+    A useful plan must remain responsive to what happens during execution. We develop fast motion generation and collision reasoning, alongside task planning methods that respond to obstacles and failed attempts. Efficient computation makes it possible to reconsider decisions while a task is underway.
+  projects:
+    - title: "Motion Generation Algorithms"
+      contribution: "Compute and revise robot movements under tight time constraints."
+    - title: "LLMs and VLMs for Robot Planning"
+      contribution: "Translate intent into structured actions that can be inspected and revised as execution unfolds."
+
+- id: learn
+  kind: core
+  label: Learn
+  eyebrow: "03 / Learn"
+  title: "Improve through experience"
+  question: "How can a robot use ongoing experience to improve its behavior?"
+  description: |
+    We investigate learning methods that make updates affordable, from efficient policy training to adaptation from a live stream of experience. Our goal is for robots to refine their skills as conditions change, with less dependence on costly retraining between deployments.
+  projects:
+    - title: "Real-time, in situ Robot Learning"
+      contribution: "Study how robots can update their behavior from experience gathered during operation."
+
+- id: foundations
+  kind: supporting
+  label: Foundations
+  eyebrow: "Across the agenda"
+  title: "The foundations that make adaptation practical"
+  question: "How can each update use less computation and make better use of what is already known?"
+  description: |
+    Fast derivatives, efficient optimization, and reusable robot models support work across perception, action, and learning. We develop these foundations as research contributions in their own right, with applications in robotics and beyond. For example, reusing information across derivative evaluations connects our mathematical work to responsive model predictive control.
+  projects:
+    - title: "Computational Differentiation and Vector Recovery"
+      contribution: "Reuse structure across computations to make derivatives more efficient for optimization and control."
+    - title: "Efficient Optimizers for Neural Networks"
+      contribution: "Reduce the computational cost of learning, including through methods that reuse information from past updates."
+    - title: "Software Tools for Robotics Research"
+      contribution: "Share robot representations and practical tools across modeling, planning, simulation, and visualization."
+
+- id: collaborations
+  kind: supporting
+  label: Collaborations
+  eyebrow: "Applications and collaborations"
+  title: "Developing ideas with domain experts"
+  question: "Where can these methods help, and what new questions emerge in practice?"
+  description: |
+    Home and assistive robotics, healthcare, and disaster response motivate our research. Our collaborations also address problems with their own goals and measures of success. With clinical collaborators, we study surgical perception and geometric analysis.
+  projects:
+    - title: "AI for Robotic Surgery"
+      contribution: "Work with clinicians to extract useful, interpretable information from surgical video."

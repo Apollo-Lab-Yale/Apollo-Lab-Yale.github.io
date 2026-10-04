@@ -314,6 +314,80 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// Shared research narrative and progressive disclosure of individual projects.
+.content h1.apollo-mission-headline {
+  display: block;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0 auto 1.5rem;
+  max-width: 720px;
+}
+.agenda-eyebrow {
+  display: block;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.home-agenda { margin: 0 0 3rem; }
+.home-agenda > h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: 1.5rem; }
+.agenda-question-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.agenda-question-link {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem;
+  border: 1px solid #dbe5f3;
+  border-top: 3px solid var(--apollo-primary);
+  border-radius: 12px;
+  background: #fff;
+  color: #1e293b;
+  text-decoration: none;
+  transition: border-color 150ms ease, background 150ms ease;
+  h3 { font-size: 1.05rem; line-height: 1.5; margin: 0 0 1.5rem; }
+  &:hover { background: #eff6ff; border-color: var(--apollo-primary); text-decoration: none; }
+}
+.agenda-explore { margin-top: auto; color: #2563eb; font-size: 0.85rem; font-weight: 600; }
+.agenda-connection { margin: 1.5rem 0 0.75rem; color: #475569; line-height: 1.75; }
+.agenda-overview-link { display: inline-block; margin-top: 0.5rem; color: #2563eb; font-weight: 600; }
+.research-mission { margin: 0 0 1.5rem; line-height: 1.8; }
+.research-mission h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; margin-bottom: 1.25rem; }
+.research-mission .lead { color: #334155; font-size: 1.2rem; }
+.agenda-jump-links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1.5rem 0 2rem; }
+.agenda-jump-links a { border: 1px solid #c7d9f5; border-radius: 999px; padding: 0.5rem 1rem; color: #2563eb; background: #fff; font-weight: 600; }
+.research-scenario { padding: 1.5rem; background: #edf4ff; border-left: 3px solid var(--apollo-primary); border-radius: 0 12px 12px 0; line-height: 1.75; }
+.research-scenario h3 { font-size: 1.15rem; }
+.research-scenario p:last-child { margin-bottom: 0; }
+.research-agenda-section { scroll-margin-top: 100px; margin: 3.5rem 0; }
+.research-agenda-section > h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; }
+.agenda-question { font-size: 1.15rem; color: #334155; margin: 1rem 0; font-weight: 600; }
+.agenda-description { line-height: 1.8; margin-bottom: 1.5rem; color: #475569; }
+.research-agenda-supporting { padding-top: 2.5rem; border-top: 1px solid #dbe5f3; }
+.research-project { scroll-margin-top: 100px; background: #fff; border: 1px solid #dbe5f3; border-radius: 12px; margin: 1rem 0; }
+.research-project > summary { cursor: pointer; padding: 1.4rem; list-style: none; border-radius: 12px; }
+.research-project > summary::-webkit-details-marker { display: none; }
+.research-project > summary:hover { background: #f1f6ff; }
+.research-project-heading { display: flex; align-items: baseline; gap: 0.75rem; }
+.research-project-heading > i { color: var(--apollo-primary); width: 1.3rem; flex-shrink: 0; }
+.research-project-heading h3 { font-size: 1.1rem; line-height: 1.5; margin: 0; }
+.research-project-toggle { margin-left: auto; color: #2563eb; font-size: 1.4rem; flex-shrink: 0; }
+.research-project[open] .research-project-toggle { transform: rotate(45deg); }
+.research-project[open] > summary { border-bottom: 1px solid #dbe5f3; border-radius: 12px 12px 0 0; }
+.research-project-contribution { display: block; color: #475569; line-height: 1.7; margin: 0.75rem 0; }
+.research-project-hint { font-size: 0.8rem; color: #2563eb; }
+.research-project .carousel-item { height: clamp(220px, 40vw, 480px) !important; }
+.research-next-step { border-top: 1px solid #dbe5f3; padding: 2rem 0; }
+.research-next-step .btn { margin: 0 0.5rem 0.5rem 0; }
+.agenda-question-link:focus-visible, .agenda-jump-links a:focus-visible, .research-project > summary:focus-visible { outline: 3px solid var(--apollo-primary); outline-offset: 4px; }
+@media (max-width: 767.98px) {
+  .agenda-question-grid { grid-template-columns: 1fr; }
+  .agenda-question-link h3 { margin-bottom: 1rem; }
+  .research-project > summary { padding: 1rem; }
+}
+
 // Optional section-header design. Disable via refined_section_headers in _config.yml.
 .header.bg-no-image.header--refined {
   padding: 3rem 0 !important;

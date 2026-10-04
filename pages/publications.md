@@ -56,9 +56,9 @@ permalink: /publications/
       </div>
       
       <div class="col-md-3 mb-3">
-        <label for="filter-thread" style="font-weight: 500; font-size: 0.9em; color: #555;">Research Thread</label>
+        <label for="filter-thread" style="font-weight: 500; font-size: 0.9em; color: #555;">Project Area</label>
         <select id="filter-thread" class="form-control filter-input">
-          <option value="all">All Threads</option>
+          <option value="all">All Project Areas</option>
           {% for thread in all_threads %}
           <option value="{{ thread | downcase | strip }}">{{ thread }}</option>
           {% endfor %}

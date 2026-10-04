@@ -1,0 +1,15 @@
+<section class="home-agenda" aria-labelledby="home-agenda-title">
+  <h2 id="home-agenda-title">Understanding, action, and learning <em>together</em></h2>
+  <p class="agenda-eyebrow">Research Questions</p>
+  <div class="agenda-question-grid">
+    {% for group in site.data.research_agenda %}{% if group.kind == 'core' %}
+    <a class="agenda-question-link" href="{{ '/research/#' | append: group.id | relative_url }}">
+      <span class="agenda-eyebrow">{{ group.eyebrow }}</span>
+      <h3>{{ group.question }}</h3>
+      <span class="agenda-explore">Explore this question <span aria-hidden="true">&rarr;</span></span>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+  <p class="agenda-connection">We connect these questions through efficient computation: exploiting geometry, reusing information, and learning from experience. Our mathematical methods and software tools help make adaptation practical.</p>
+  <a class="agenda-overview-link" href="{{ '/research/' | relative_url }}">Explore our research agenda <span aria-hidden="true">&rarr;</span></a>
+</section>

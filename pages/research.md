@@ -3,132 +3,60 @@ title: Research
 permalink: /research/
 ---
 
-<p class="lead mb-5 text-center px-4" style="font-size: 1.25rem; line-height: 1.7; color: #475569;">
-  We are pursuing several research directions simultaneously in the lab. The following vignettes provide a snapshot of some of the key challenges we are addressing and the innovative solutions we are developing.
-</p>
+<section class="research-mission" aria-labelledby="research-mission-title">
+  <p class="agenda-eyebrow">Our research mission</p>
+  <h2 id="research-mission-title">Robots that adapt while they work.</h2>
+  <p>We develop the computational foundations for robots that can update their understanding, actions, and skills as the world changes.</p>
+  <p>A robot working in an unfamiliar environment needs to gather useful information, revise its actions, and learn from what happens. Our research asks how to make those updates practical within the time and computation available during operation.</p>
+  <p>We exploit geometry, reuse information across related computations, and learn efficiently from experience. These ideas connect our work in perception, planning, learning, and optimization.</p>
+</section>
 
-{% for thread in site.data.research %}
-{% assign thread_idx = forloop.index %}
-<div id="{{ thread.title | slugify }}" class="card border-0 mb-5" style="scroll-margin-top: 100px; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border-left: 5px solid var(--apollo-primary) !important; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
-  <div class="card-body p-4 p-lg-5">
-    
-    <!-- Thread Title -->
-    <h2 class="font-weight-bold mb-4" style="color: #1e293b; letter-spacing: -0.02em; border-bottom: 4px solid var(--apollo-primary); padding-bottom: 0.75rem; display: inline-flex; align-items: center; gap: 15px;">
-      <i class="{{ thread.icon }}" style="color: var(--apollo-primary); font-size: 0.9em;"></i>
-      {{ thread.title }}
-      <a href="#{{ thread.title | slugify }}" class="ms-2" style="font-size: 0.6em; vertical-align: middle; color: #94a3b8; transition: color 0.2s ease; text-decoration: none;" 
-            onmouseover="this.style.color='var(--apollo-primary)'"
-            onmouseout="this.style.color='#94a3b8'" 
-            title="Link to this thread">
-        <i class="fas fa-link"></i>
-      </a>
-    </h2>
-    
-    <div class="row mt-3">
-      {% if thread.media and thread.media.size > 0 %}
-        <!-- Dedicated Media Header Segment -->
-        <div class="col-12 mb-5">
-          
-          {% if thread.media.size == 1 %}
-            <!-- Single Media Formatter -->
-            {% assign m = thread.media[0] %}
-            {% if m.type == 'video' %}
-              <div class="shadow-sm text-center" style="border-radius: 12px; overflow: hidden; background-color: #ffffff;">
-                <video autoplay loop muted playsinline webkit-playsinline preload="auto" onended="this.play()" style="display: block; object-fit: contain; width: 100%; max-height: 550px;">
-                  <source src="{{ m.src | relative_url }}" type="video/mp4">
-                </video>
-              </div>
-            {% else %}
-              <div class="shadow-sm text-center" style="border-radius: 12px; overflow: hidden; background-color: #ffffff;">
-                <img src="{{ m.src | relative_url }}" class="img-fluid" style="width: 100%; height: 100%; max-height: 550px; object-fit: contain;" alt="{{ thread.title }}">
-              </div>
-            {% endif %}
-            
-          {% else %}
-            <!-- Multi-Media Gallery Carousel -->
-            <div id="carousel-thread-{{ thread_idx }}" class="carousel slide shadow-sm" data-bs-ride="carousel" data-bs-pause="false" style="border-radius: 12px; overflow: hidden; background-color: #ffffff;">
-              
-              <!-- Indicators -->
-              <div class="carousel-indicators mb-2">
-                {% for m in thread.media %}
-                  <button type="button" data-bs-target="#carousel-thread-{{ thread_idx }}" data-bs-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true"></button>
-                {% endfor %}
-              </div>
+<nav class="agenda-jump-links" aria-label="Research questions">
+  {% for group in site.data.research_agenda %}{% if group.kind == 'core' %}
+    <a href="#{{ group.id }}">{{ group.label }} <span aria-hidden="true">&darr;</span></a>
+  {% endif %}{% endfor %}
+</nav>
 
-              <!-- Gallery Items -->
-              <div class="carousel-inner">
-                {% for m in thread.media %}
-                  <div class="carousel-item {% if forloop.first %}active{% endif %}" style="height: 550px;">
-                    {% if m.type == 'video' %}
-                      <video autoplay loop muted playsinline webkit-playsinline preload="auto" onended="this.play()" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;">
-                        <source src="{{ m.src | relative_url }}" type="video/mp4">
-                      </video>
-                    {% else %}
-                      <img src="{{ m.src | relative_url }}" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;" alt="Thread Gallery Image">
-                    {% endif %}
-                  </div>
-                {% endfor %}
-              </div>
-              
-              <!-- Interaction Controls -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-thread-{{ thread_idx }}" data-bs-slide="prev" style="background: none; width: 8%; border: none;">
-                <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); opacity: 1 !important;"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel-thread-{{ thread_idx }}" data-bs-slide="next" style="background: none; width: 8%; border: none;">
-                <span class="carousel-control-next-icon" aria-hidden="true" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); opacity: 1 !important;"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
-        
-      <!-- Full Width Text Field and Selected Publications -->
-      <div class="col-12">
-        <div style="font-size: 1.15rem; line-height: 1.7; color: #334155;">
-          {{ thread.content | markdownify | replace: '<img', '<img class="img-fluid rounded shadow-sm my-3" style="max-height:400px; display:block;"' }}
-        </div>
-        
-        <!-- Case-Insensitive Explicit Selected Publications -->
-        {% assign related_pubs = "" | split: "," %}
-        {% if thread.selected_publications %}
-          {% for selected_title in thread.selected_publications %}
-            {% assign selected_title_down = selected_title | downcase %}
-            {% for pub in site.data.publications %}
-              {% assign pub_title_down = pub.title | downcase %}
-              {% if pub_title_down == selected_title_down %}
-                {% assign related_pubs = related_pubs | push: pub %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        {% endif %}
-        
-        {% if related_pubs.size > 0 %}
-        <div class="mt-4 pt-4 border-top">
-          <h4 class="font-weight-bold mb-3" style="color: #1e293b; font-size: 1.15rem;">
-            <i class="fas fa-book-open text-primary me-2"></i> Selected publications
-          </h4>
-          <ul class="list-unstyled mb-0 ps-1">
-            {% for pub in related_pubs %}
-            {% assign pub_slug = pub.title | slugify %}
-            <li class="mb-2">
-              <a href="{{ '/publications/#' | append: pub_slug | relative_url }}" class="text-decoration-none" style="color: var(--apollo-primary); font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='var(--apollo-primary-hover)';" onmouseout="this.style.color='var(--apollo-primary)';">
-                <i class="fas fa-file-alt me-2 text-muted" style="font-size: 0.9em;"></i> {{ pub.title }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
-        
-      </div>
-      
-    </div>
-  </div>
+<div class="research-scenario">
+  <h3>One situation, three connected challenges</h3>
+  <p>Imagine a robot reaching for an unfamiliar object as its surroundings change. It must build a useful model of the object, choose where to look, revise its motion, and use the outcome to improve its next attempt.</p>
+  <p>Our projects address different parts of this process. Our longer-term goal is to bring these capabilities together so that better perception informs action, and experience improves both.</p>
 </div>
+
+{% for group in site.data.research_agenda %}
+<section id="{{ group.id }}" class="research-agenda-section{% if group.kind != 'core' %} research-agenda-supporting{% endif %}" aria-labelledby="{{ group.id }}-title">
+  <p class="agenda-eyebrow">{{ group.eyebrow }}</p>
+  <h2 id="{{ group.id }}-title">{{ group.title }}</h2>
+  <p class="agenda-question">{{ group.question }}</p>
+  <div class="agenda-description">{{ group.description | markdownify }}</div>
+  {% for project in group.projects %}
+    {% include research_project.html %}
+  {% endfor %}
+</section>
 {% endfor %}
+
+<div class="research-next-step">
+  <p>Explore the papers behind this agenda, or find out how to contribute.</p>
+  <a class="btn btn-primary" href="{{ '/publications/' | relative_url }}">Browse publications</a>
+  <a class="btn btn-outline-primary" href="{{ '/joining/' | relative_url }}">Join the lab</a>
+</div>
+
+<script>
+// Preserve links from team profiles and bookmarks into the detailed project sections.
+(function () {
+  function revealLinkedProject() {
+    let id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (_) { return; }
+    const target = document.getElementById(id);
+    if (target && target.tagName === 'DETAILS') {
+      target.open = true;
+      requestAnimationFrame(function () { target.scrollIntoView({ block: 'start' }); });
+    }
+  }
+  document.addEventListener('DOMContentLoaded', revealLinkedProject);
+  window.addEventListener('hashchange', revealLinkedProject);
+})();
+</script>
 
 <script>
 /**
