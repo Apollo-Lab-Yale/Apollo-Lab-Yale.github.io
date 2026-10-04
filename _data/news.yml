@@ -24,6 +24,38 @@
 #            Use `|` for multi-line text blocks.
 # ==========================================
 
+- date: "2026-10-04"
+  type: "Conference"
+  title: "APOLLO Lab at IROS"
+  tags: [IROS, Robotics, Award]
+  media:
+    - src: "assets/theme/images/news/iros-2026/tj-ltp-poster.jpg"
+      caption: "TJ Vitchutripop with the streaming reinforcement learning poster at the LTP workshop."
+    - src: "assets/theme/images/news/iros-2026/wasp-presentation.jpg"
+      caption: "Presenting the key insight behind Web of Affine Spaces derivatives."
+    - src: "assets/theme/images/news/iros-2026/wasp-session.jpg"
+      caption: "The MuJoCo-based model predictive control presentation at IROS 2026."
+    - src: "assets/theme/images/news/iros-2026/quadruped-results.jpg"
+      caption: "Quadruped locomotion results during the model predictive control presentation."
+    - src: "assets/theme/images/news/iros-2026/wasp-poster.jpg"
+      caption: "The MuJoCo-based model predictive control poster and demonstration."
+    - src: "assets/theme/images/news/iros-2026/poster-discussion.jpg"
+      caption: "Discussing the model predictive control work during the IROS poster session."
+  content: |
+    APOLLO Lab shared work on continual learning and model predictive control at **IROS 2026**.
+
+    **Award finalist at the LTP workshop**
+
+    **TJ Vitchutripop** was an **award finalist** at the **Long-Term Perception for Human-Centric Autonomy (LTP)** workshop for our work, **An Analysis of Streaming Deep Reinforcement Learning for Adaptive Continual Learning in Robotics**.
+
+    *Authors: Teeratham Vitchutripop, Alyssa Quarles, Wenhe Zhang, Richard Xue, Daniel Rakita.*
+
+    **Model predictive control at IROS**
+
+    Our work, **Robust and Efficient MuJoCo-based Model Predictive Control via Web of Affine Spaces Derivatives**, was also presented at the conference.
+
+    *Authors: Chen Liang, Daniel Rakita.*
+
 - date: "2026-09-25"
   type: "Publication"
   title: "Paper in collaboration with APOLLO Lab accepted at NeurIPS 2026!"

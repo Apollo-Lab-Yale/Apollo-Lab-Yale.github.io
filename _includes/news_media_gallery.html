@@ -1,5 +1,5 @@
 {% if post.media and post.media.size > 0 %}
-  {% assign gallery_id = post_id_prefix | default: 'news-gallery' | append: '-' | append: forloop_index %}
+  {% assign gallery_id = include.post_id_prefix | default: 'news-gallery' | append: '-' | append: include.forloop_index %}
   
   <div class="news-media-gallery my-3">
     {% if post.media.size == 1 %}
@@ -36,7 +36,7 @@
         <!-- Indicators (Dots) -->
         <div class="carousel-indicators mb-2">
           {% for item in post.media %}
-            <button type="button" data-bs-target="#carousel-{{ gallery_id }}" data-target="#carousel-{{ gallery_id }}" data-bs-slide-to="{{ forloop.index0 }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}"></button>
+            <button type="button" data-bs-target="#carousel-{{ gallery_id }}" data-target="#carousel-{{ gallery_id }}" data-bs-slide-to="{{ forloop.index0 }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}" aria-label="Photo {{ forloop.index }}"></button>
           {% endfor %}
         </div>
 
@@ -60,7 +60,7 @@
                   <source src="{{ item_src | relative_url }}" type="video/mp4">
                 </video>
               {% else %}
-                <img src="{{ item_src | relative_url }}" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;" alt="Gallery Photo">
+                <img src="{{ item_src | relative_url }}" class="d-block mx-auto" style="object-fit: contain; width: 100%; height: 100%;" alt="{{ item.caption | default: post.title | escape }}" loading="lazy">
               {% endif %}
               {% if item.caption %}
                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded px-3 py-1 mb-2">
