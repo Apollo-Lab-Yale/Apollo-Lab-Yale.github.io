@@ -27,8 +27,6 @@ permalink: /
     Applied Planning, Learning, and Optimization (APOLLO) Lab
   </h2>
 
-  <h1 class="apollo-mission-headline">Robots that adapt while they work.</h1>
-
   <!-- Clean prose -->
   <div class="apollo-hero-prose">
     <p>
