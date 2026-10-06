@@ -33,7 +33,7 @@ permalink: /
       We develop the <strong>computational foundations</strong> for robots that can update their understanding, actions, and skills as the world changes. Our research brings together perception, planning, learning, and optimization to make adaptation practical within the time and computation available during operation.
     </p>
     <p>
-      We pursue this goal through connected work on <strong>understanding a changing world</strong>, <strong>revising actions</strong>, and <strong>learning from experience</strong>.
+      We pursue this goal through connected work on <strong>understanding a changing world</strong>, <strong>acting reliably and responsively</strong>, and <strong>learning from experience</strong>.
     </p>
   </div>
 

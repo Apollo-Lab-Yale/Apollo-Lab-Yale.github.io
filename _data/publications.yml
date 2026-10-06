@@ -26,23 +26,42 @@
 #           icon: "fas fa-database" # FontAwesome class
 # ==========================================
 
+- title: "I2CD: Direct Image-to-Convex Decomposition for Simulation-Ready Collision Geometry"
+  authors: "Qian Wang, Liam Merz Hoffmeister, Brian Scassellati, Daniel Rakita"
+  type: "Preprint"
+  year: 2026
+  link: "https://arxiv.org/abs/2610.03453v1"
+  threads: ["Automatic Mesh Generation for Robotics", "Motion Generation Algorithms"]
+
+- title: "Decoupling Vision, Language, and Action for Efficient Multi-Task Robot Policies"
+  authors: "Xiatao Sun, Chen Liang, Ziyao Zeng, Qian Wang, Haoyang Zhang, Yue Sun, Qiucheng Li, Daniel Rakita"
+  type: "Preprint"
+  year: 2026
+  link: "https://arxiv.org/abs/2609.18374v2"
+  threads: ["Fast and Robust Robot Foundation Models"]
+  keywords: "DEM"
+
 - title: "RuleSmith: Multi-Agent LLMs for Automated Game Balancing"
   authors: "Ziyao Zeng, Hao Wang, Chen Liu, Youheng Yao, Jingcheng Ni, Tianyu Liu, Xiatao Sun, Fengyu Yang, Chenyu You, Xiaofeng Liu, Daniel Rakita, Ronald R. Coifman, Yuval Kluger, Zhiwen Fan"
   type: "Conference"
   venue: "NeurIPS"
   year: 2026
+  link: "https://arxiv.org/abs/2602.06232"
 
 - title: "Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models"
   authors: "Xiatao Sun, Yuan Zhuang, Mateo Sanchez Lopez Negrete, Matei-Victor Coldea, Chen Liang, Haoyang Zhang, Che Liu, Ziyao Zeng, Shawn Li, Qian Wang, Fei Miao, Daniel Rakita"
   type: "Conference"
   venue: "CoRL"
   year: 2026
+  link: "https://arxiv.org/abs/2607.10655"
+  threads: ["Fast and Robust Robot Foundation Models"]
 
 - title: "Efficient On-policy Visual-RL via Stochastic Decoupled Policy Gradient"
   authors: "Haoxiang You, Yilang Liu, Davis Zong, Qian Wang, Teeratham Vitchutripop, Qi Wang, Daniel Rakita, Ian Abraham"
   type: "Conference"
   venue: "CoRL"
   year: 2026
+  link: "https://arxiv.org/abs/2605.26478"
 
 - title: "AI-Powered Semantic Segmentation Model for Enhanced Ureteral Mapping and Real-Time Instrument Feedback in Robotic Colorectal Surgery"
   authors: "Justin M. Bader, Xiatao Sun, Tripp Rosenfelt, Alexis Ramirez-Hardy, Netanel Sapir, Rachel Scheub, Teeratham Vitchutripop, Amit Khanna, Haddon Pantel, Daniel Rakita"
@@ -113,7 +132,7 @@
   type: "Conference"
   venue: "ICML"
   year: 2026
-  # link: "https://arxiv.org/abs/2512.21109"
+  link: "https://arxiv.org/abs/2605.14373"
   threads: ["Computational Differentiation and Vector Recovery", "Efficient Optimizers for Neural Networks"]
 
 - title: "Robust and Efficient MuJoCo-based Model Predictive Control via Web of Affine Spaces Derivatives"
@@ -148,7 +167,7 @@
   type: "Preprint"
   # venue: "IROS"
   year: 2026
-  # link: "https://arxiv.org/abs/2504.15976"
+  link: "https://arxiv.org/abs/2609.28807"
   threads: ["Real-time, in situ Robot Learning"]
   # keywords: "Differentiation, Rust, Robotics"
 
@@ -170,6 +189,7 @@
   venue: "IROS"
   threads: ["LLMs and VLMs for Robot Planning"]
   year: 2025
+  link: "https://arxiv.org/abs/2601.03398"
   keywords: "Task Planning, LLMs"
 
 - title: "Coherence-based Approximate Derivatives via Web of Affine Spaces Optimization"
@@ -245,3 +265,7 @@
   year: 2021
   threads: ["Motion Generation Algorithms"]
   link: "https://ieeexplore.ieee.org/abstract/document/9645379"
+  extra_links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2112.06402"
+      icon: "fas fa-file-alt"

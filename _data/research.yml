@@ -147,6 +147,16 @@
   selected_publications:
     - "Deep learning approach for critical exposure during division of the inferior mesenteric artery in colorectal surgery"
 
+- title: "Fast and Robust Robot Foundation Models"
+  icon: "fas fa-brain"
+  content: |
+    We study how to make robot foundation models faster and more reliable in deployment. Our work explores efficient policy architectures, task-relevant visual grounding, and robustness to changes in the environment. We also investigate when compact policies can achieve comparable performance with substantially less computation.
+
+    **Decoupled Embodiment Model (DEM)** explores efficient alternatives to large vision-language-action policies, separating vision and language encoders from a compact action head to reduce inference latency and energy use. **Artificial Foveated Perception (AFP)** addresses robustness by grounding policies in task-relevant visual information, reducing shortcut learning and improving generalization as scene conditions change.
+  selected_publications:
+    - "Decoupling Vision, Language, and Action for Efficient Multi-Task Robot Policies"
+    - "Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models"
+
 - title: "Motion Generation Algorithms"
   icon: "fas fa-route"
   media:

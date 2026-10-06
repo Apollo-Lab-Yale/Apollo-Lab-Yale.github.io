@@ -19,11 +19,13 @@
   kind: core
   label: Act
   eyebrow: "02 / Act"
-  title: "Revise actions as conditions change"
-  question: "How can a robot adjust its plans and movements as new information arrives?"
+  title: "Act reliably as conditions change"
+  question: "How can robots act reliably and respond quickly as conditions change?"
   description: |
-    A useful plan must remain responsive to what happens during execution. We develop fast motion generation and collision reasoning, alongside task planning methods that respond to obstacles and failed attempts. Efficient computation makes it possible to reconsider decisions while a task is underway.
+    Reliable action requires both responsive planning and policies that remain effective as conditions change. We develop fast motion generation and collision reasoning, task planning methods that respond to obstacles and failed attempts, and robot policies that balance robustness with inference speed. Efficient computation makes it possible to act and reconsider decisions while a task is underway.
   projects:
+    - title: "Fast and Robust Robot Foundation Models"
+      contribution: "Improve policy reliability and inference speed through efficient architectures and task-relevant visual grounding."
     - title: "Motion Generation Algorithms"
       contribution: "Compute and revise robot movements under tight time constraints."
     - title: "LLMs and VLMs for Robot Planning"
