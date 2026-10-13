@@ -4,8 +4,7 @@ permalink: /research/
 ---
 
 <section class="research-mission" aria-labelledby="research-mission-title">
-  <p class="agenda-eyebrow">Our research mission</p>
-  <h2 id="research-mission-title">Robots that adapt while they work.</h2>
+  <p class="agenda-eyebrow" id="research-mission-title">Our research mission</p>
   <p>We develop the computational foundations for robots that can update their understanding, actions, and skills as the world changes.</p>
   <p>A robot working in an unfamiliar environment needs to gather useful information, revise its actions, and learn from what happens. Our research asks how to make those updates practical within the time and computation available during operation.</p>
   <p>We exploit geometry, reuse information across related computations, and learn efficiently from experience. These ideas connect our work in perception, planning, learning, and optimization.</p>
@@ -18,7 +17,7 @@ permalink: /research/
 </nav>
 
 <div class="research-scenario">
-  <h3>One situation, three connected challenges</h3>
+  <h3>For example...</h3>
   <p>Imagine a robot reaching for an unfamiliar object as its surroundings change. It must build a useful model of the object, choose where to look, revise its motion, and use the outcome to improve its next attempt.</p>
   <p>Our projects address different parts of this process. Our longer-term goal is to bring these capabilities together so that better perception informs action, and experience improves both.</p>
 </div>

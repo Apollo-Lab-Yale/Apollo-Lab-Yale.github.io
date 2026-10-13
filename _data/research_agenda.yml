@@ -2,7 +2,7 @@
 - id: understand
   kind: core
   label: Understand
-  eyebrow: "01 / Understand"
+  eyebrow: "1. Understand"
   title: "Understand a changing world"
   question: "How can a robot understand an unfamiliar situation quickly enough to act?"
   description: |
@@ -18,7 +18,7 @@
 - id: act
   kind: core
   label: Act
-  eyebrow: "02 / Act"
+  eyebrow: "2. Act"
   title: "Act reliably as conditions change"
   question: "How can robots act reliably and respond quickly as conditions change?"
   description: |
@@ -34,7 +34,7 @@
 - id: learn
   kind: core
   label: Learn
-  eyebrow: "03 / Learn"
+  eyebrow: "3. Learn"
   title: "Improve through experience"
   question: "How can a robot use ongoing experience to improve its behavior?"
   description: |
