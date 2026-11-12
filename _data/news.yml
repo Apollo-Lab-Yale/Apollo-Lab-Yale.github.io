@@ -24,6 +24,26 @@
 #            Use `|` for multi-line text blocks.
 # ==========================================
 
+- date: "2026-11-12"
+  type: "Conference"
+  title: "APOLLO Lab at CoRL"
+  tags: [CoRL, Robotics, Robot Learning]
+  media:
+    - src: "assets/theme/images/news/corl-2026/xiatao-afp-poster.jpg"
+      caption: "Xiatao Sun with the Artificial Foveated Perception poster at CoRL 2026."
+    - src: "assets/theme/images/news/corl-2026/afp-poster-presentation.jpg"
+    - src: "assets/theme/images/news/corl-2026/afp-poster-discussion.jpg"
+  content: |
+    APOLLO Lab shared work on robotic foundation models and visual reinforcement learning at **CoRL 2026**.
+
+    **Xiatao Sun** presented our work, **Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models**.
+
+    *Authors: Xiatao Sun, Yuan Zhuang, Mateo Sanchez Lopez Negrete, Matei-Victor Coldea, Chen Liang, Haoyang Zhang, Che Liu, Ziyao Zeng, Shawn Li, Qian Wang, Fei Miao, Daniel Rakita.*
+
+    Also, a paper developed in collaboration with APOLLO Lab, called **Efficient On-policy Visual-RL via Stochastic Decoupled Policy Gradient**, was presented at the conference.
+
+    *Authors: Haoxiang You, Yilang Liu, Davis Zong, Qian Wang, Teeratham Vitchutripop, Qi Wang, Daniel Rakita, Ian Abraham.*
+
 - date: "2026-10-04"
   type: "Conference"
   title: "APOLLO Lab at IROS"
